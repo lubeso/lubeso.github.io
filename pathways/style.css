@@ -1,0 +1,93 @@
+.centered {
+    background-color: #303030;
+    opacity: 0.8;
+    left: 50%;
+    padding: 20px;
+    transform: translate(-50%,-100%);
+    text-align: center;
+    transition: opacity 0.8s;
+    -webkit-transition: opacity 0.8s;
+}
+
+.lefta {
+    width: 50%;
+    height: 100%;
+    bottom: 30%;
+    padding: 10px;
+    text-align: left;
+}
+
+.righta {
+    width: 40%;
+    bottom: 30%;
+    padding: 10px;
+    text-align: center;
+    right: 0;
+}
+
+.centera {
+    text-align: center;
+}
+
+.justa {
+    text-align: justify;
+}
+
+body {
+    background-image: url('img/bg.png');
+    background-attachment: fixed;
+}
+
+section {
+    position: sticky;
+    width: 80%;
+    height: 80%;
+}
+
+.colsNV {
+    display: flex;
+    flex-direction: column;
+    opacity: 0; 
+    transition: opacity 0.8s;
+    -webkit-transition: opacity 0.8s;
+}
+
+.colsV {
+    display: flex;
+    flex-direction: column;
+    opacity: 1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 40px;
+    font-family: "Roboto", "Open Sans", sans-serif;
+    color: whitesmoke;
+}
+
+p {
+    font-family: "Roboto", "Open Sans", sans-serif;
+    font-style: italic;
+    font-size: 20px;
+    color: white;
+}
+
+ul li  {
+    font-family: "Roboto", "Open Sans", sans-serif;
+    font-style: italic;
+    font-size: 30px;
+    color: white;
+}
+
+img {
+    box-shadow: 0em 0em 10px;
+}
+
+.notVisible {
+    background-color: #303030;
+    opacity: 0;
+    left: 50%;
+    width: 50%;
+    padding: 20px;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
