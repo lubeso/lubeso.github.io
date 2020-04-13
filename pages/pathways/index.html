@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='UTF-8'>
+        <meta author='Luis Becerra Solis, Karyn Nakamura'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <title>Pathways</title>
+        <link rel='stylesheet' type='text/css' href='style.css'>
+        <script src='https://d3js.org/d3.v4.min.js'></script>
+        <script src='js/scrollmagic/uncompressed/ScrollMagic.js'></script>
+        <script src='js/scrollmagic/uncompressed/plugins/debug.addIndicators.js'></script>
+    </head>
+    <body>    
+
+        <div id='front' class='centered'>
+            <h1>Pathways</h1>
+            <p style='color:white;'>Karyn Nakamura, Luis Becerra Solis</p>
+        </div>
+        
+        <section id='revisions'>
+            <h2>Revisions</h2>
+            <article class='colsNV' id='vis'>
+            <div>        
+            <h3>Visualizations</h3>
+            <p>After receiving feedback from Yuan, we decided to alter our intended visualizations of student commute times. Our original intent was for a user to specify home and school addresses, and display a predetermined commute, with additional information and statistics regarding commutes. Instead, we will be emulating the visualization in this <a href='https://www.nytimes.com/interactive/2019/07/08/upshot/nyc-subway-variability-calculator.html'>New York Times article</a> regarding work commute time variability. We decided visualizing aggregate data would better communicate the number of students on a particular commute, as well as the overall commuting conditions they endure. </p>
+            </div>
+            <div id='commutes' class='centera'>
+                <img id='fig1' src='img/fig1.png' width=95%></img>
+            </div>
+        </article>
+        <div id='trigger'></div>
+        <article class='colsNV' id='data'>
+            <div>        
+            <h3>Data foci</h3>
+            <p>We want to highlight how school accessibility is affected by the interplay of the following factors:
+                <ul>
+                    <li>School quality</li>
+                    <li>Race</li>
+                    <li>Income</li>
+                    <li>Gender (potentially)</li>
+                </ul>
+            <p>Sean Corcoran, an associate professor at Vanderbilt University, published a <a href='https://www.urban.org/research/publication/school-choice-and-commuting/view/full_report'>report on school choice and commuting</a> whose findings include Black students having higher average commute times. We would like to visualize these differences across demographics to assist in deriving causal inference about inaccessibility. Are certain schools focused in particularly affluent/white communities? Are certain demographics further away from certain schools city-wide? We seek to highlight and analyze these questions with spatial visualization.</p>
+            </div>
+            <div id='commutes' class='centera'>
+                <img id='fig2' src='img/fig2.png' height=80%></img>
+            </div>
+        </article>
+        </section>
+    </body>
+
+<script>
+            var controller = new ScrollMagic.Controller();
+
+            new ScrollMagic.Scene({
+                triggerElement: '#front',
+                duration: 1200
+            })
+            .setPin('#front')
+            .addTo(controller);
+            
+            new ScrollMagic.Scene({
+                triggerElement: '#revisions',
+            })
+            .setClassToggle('#front','notVisible')
+            .addTo(controller);
+
+            new ScrollMagic.Scene({
+                triggerElement: '#vis',
+                triggerHook: 0
+            })
+            .setClassToggle('#vis', 'colsV')
+            .addTo(controller);
+
+            new ScrollMagic.Scene({
+                triggerElement: '#vis',
+                triggerHook: 0,
+                duration: 900
+            })
+            .setPin('#vis')
+            .addTo(controller);
+
+            new ScrollMagic.Scene({
+                triggerElement: '#data',
+            })
+            .setClassToggle('#vis','colsNV')
+            .addTo(controller);
+
+            new ScrollMagic.Scene({
+                triggerElement: '#data',
+                duration: 900
+            })
+            .setClassToggle('#data','colsV')
+            .addTo(controller);
+</script>
+</html>

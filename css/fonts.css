@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'Linux Libertine';
+    src: url('../fonts/libertine/LinLibertine_R.otf')
+}
+
+@font-face {
+    font-family: 'Linux Libertine';
+    font-style: italic;
+    src: url('../fonts/libertine/LinLibertine_RI.otf')
+}
+
+@font-face {
+    font-family: 'Linux Libertine';
+    font-style: bold;
+    src: url('../fonts/libertine/LinLibertine_RB')
+}
