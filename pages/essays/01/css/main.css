@@ -42,11 +42,11 @@ picture {
     text-align: center;
 }
 
-@media screen and (min-device-width: 1000px) {
+/* @media screen and (min-device-width: 1000px) {
     p, ul, ol {
     font-size: 20px;
     }
-}
+} */
 
 a {
     color: #539971;
