@@ -16,9 +16,9 @@ header {
     height: 200px;
     background-color: #539971;
     background-image: url('../../../../img/svg/logo-full.svg');
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
-    background-position-x: center;
+    background-position: center;
     border-radius: 10px;
 }
 
@@ -42,14 +42,8 @@ picture {
     text-align: center;
 }
 
-@media screen (width >= 737px) {
-    ul, ol {
-    font-size: 20px;
-    }
-}
-
-@media screen (width >= 737px)  {
-    p {
+@media screen and (min-width: 737px) {
+    p, ul, ol {
     font-size: 20px;
     }
 }
