@@ -1,0 +1,60 @@
+@import url('../../../../css/fonts.css');
+
+* {
+    color: rgb(255,255,204);
+    font-family: 'Linux Libertine', serif;
+}
+
+body {
+    background-color: #5c638d;
+}
+
+header {
+    margin: 0 auto;
+    padding: 2px 10px 1px;
+    width: 60%;
+    height: 200px;
+    background-color: #539971;
+    background-image: url('../../../../img/svg/logo-full.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    border-radius: 10px;
+}
+
+main {
+    margin: 20px auto 80px;
+    width: 60%;
+    line-height: 1.6;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 0 5px black;
+}
+
+article {
+    border-radius: 10px;
+    margin: 20px;
+}
+
+picture {
+    display: block;
+    text-align: center;
+}
+
+ul, ol {
+    font-size: 20px;
+}
+
+p {
+    font-size: 20px;
+}
+
+a {
+    color: #539971;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #539971;
+}
