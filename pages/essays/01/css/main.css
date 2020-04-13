@@ -23,6 +23,7 @@ header {
 
 main {
     margin: 0 auto;
+
     width: 60%;
     line-height: 1.6;
     background-color: rgba(0, 0, 0, 0.3);
@@ -35,6 +36,7 @@ main {
 article {
     border-radius: 10px;
     margin: 0;
+    padding: 20px;
 }
 
 picture {
@@ -59,7 +61,7 @@ code {
     font-family: monospace;
 }
 
-@media screen and (max-width: 830px) {
+@media screen and (min-width: 400px) and (max-width: 800px) {
 
     header {
         margin: 0;
@@ -86,7 +88,7 @@ code {
     }
 
     p, ul, ol {
-        font-size: 16px;
+        font-size: 3vw;
     }
 
 }
