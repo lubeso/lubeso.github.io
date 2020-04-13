@@ -16,7 +16,7 @@ header {
     height: 200px;
     background-color: #539971;
     background-image: url('../../../../img/svg/logo-full.svg');
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position-x: center;
     border-radius: 10px;
@@ -42,12 +42,16 @@ picture {
     text-align: center;
 }
 
-ul, ol {
+@media screen (width >= 737px) {
+    ul, ol {
     font-size: 20px;
+    }
 }
 
-p {
+@media screen (width >= 737px)  {
+    p {
     font-size: 20px;
+    }
 }
 
 a {
