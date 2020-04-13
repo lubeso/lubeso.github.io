@@ -65,6 +65,7 @@ code {
 
     body {
         -webkit-text-size-adjust: none;
+        padding: 10px;
     }
 
     header {
@@ -88,7 +89,6 @@ code {
     article {
         border-radius: 0;
         margin: 0px;
-        padding: 20px;
     }
 
     p, ul, ol {
@@ -97,10 +97,11 @@ code {
 
 }
 
-@media screen and (max-width: 375px) and (max-height: 667px) {
+@media screen and (max-width: 812px) and (min-height: 375px) {
 
     body {
         -webkit-text-size-adjust: none;
+        padding: 5px;
     }
 
     header {
@@ -133,25 +134,27 @@ code {
 
 }
 
-@media screen and (max-width: 414px) and (max-height: 736px) {
+@media screen and (max-width: 736px) and (min-height: 414px) {
 
     body {
         -webkit-text-size-adjust: none;
+        padding: 5px;
     }
 
     header {
         margin: 0;
         top: 0;
-        width: 100%;
+        width: inherit;
         height: 100px;
         border-radius: 0px;
         background-image: url('../../../../img/svg/lite.svg');
+        background-position: center;
     }
 
     main {
         border-radius: 0;
         margin: 0;
-        width: 100%;
+        width: inherit;
         line-height: 1.2;
         background-color: rgba(0, 0, 0, 0.3);
         box-shadow: none;
@@ -159,35 +162,37 @@ code {
 
     article {
         border-radius: 0;
-        margin: 0px;
-        padding: 10px;
+        margin: 0;
+        width: inherit;
     }
 
     p, ul, ol {
-        font-size: 20px;
+        font-size: 3vw;
     }
 
 }
 
-@media screen and (max-width: 375px) and (max-height: 812px) {
+@media screen and (min-width: 375px) and (max-height: 667px) {
 
     body {
-        -webkit-text-size-adjust: none;
+        width: 100%;
+        -webkit-text-size-adjust: auto;
     }
 
     header {
         margin: 0;
         top: 0;
-        width: 100%;
+        width: inherit;
         height: 100px;
         border-radius: 0px;
         background-image: url('../../../../img/svg/lite.svg');
+        background-position: center;
     }
 
     main {
         border-radius: 0;
         margin: 0;
-        width: 100%;
+        width: inherit;
         line-height: 1.2;
         background-color: rgba(0, 0, 0, 0.3);
         box-shadow: none;
@@ -195,12 +200,12 @@ code {
 
     article {
         border-radius: 0;
-        margin: 0px;
-        padding: 10px;
+        margin: 0;
+        width: inherit;
     }
 
     p, ul, ol {
-        font-size: 20px;
+        font-size: 3vw;
     }
 
 }
