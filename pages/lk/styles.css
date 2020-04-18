@@ -1,25 +1,41 @@
+@font-face {
+    font-family: 'M+';
+    font-style: normal;
+    src: url('fonts/mp/mplus-1c-light.ttf');
+}
+
+@font-face {
+    font-family: 'Linux Libertine';
+    font-style: normal;
+    src: url('fonts/libertine/LinLibertine_R.otf');
+}
+
+/* @font-face {
+    font-family: 'Linux Libertine';
+    font-style: italic;
+    src: url('fonts/libertine/LinLibertine_I.otf');
+} */
+
+@font-face {
+    font-family: 'Linux Libertine';
+    font-weight: bold;
+    src: url('fonts/libertine/LinLibertine_RB.otf');
+}
+
 * {
     color: white;
     line-height: 1.6;
 }
 
 html {
-    display: flex;
-    flex-flow: column nowrap;
-
-    align-items: center;
-    justify-content: center;
-
     background-color: rgb(73,0,106);
 }
 
 body {
-    flex: 1;
-    
-    margin: auto;
-
     display: flex;
     flex-flow: column nowrap;
+    
+    height: 100vh;
 
     align-items: center;
     /* justify-content: center; */
@@ -28,13 +44,24 @@ body {
 }
 
 header {
+    flex: 0 1 auto;
     display: flex;
     flex-flow: column nowrap;
 
-    align-items: center;
+    align-items: flex-end;
 
     height: 100px;
-    margin: 20px auto 0 auto;
+    margin: 0 auto 0 auto;
+}
+
+footer {
+    flex: 1;
+
+    height: 100px;
+    width: 100%;
+    bottom: 0;
+    margin: 20px auto 0 0;
+    background-color: rgba(0,0,0,0.0);
 }
 
 /* Main navigation menu */
@@ -47,7 +74,7 @@ nav.menu {
     height: 100px;
 
     margin: 10px auto;
-
+    font-family: 'Helvetica', 'M+', sans-serif;
 }
 
 nav.menu > section {
@@ -136,9 +163,19 @@ nav.branches > section:hover {
 
 /* ===================================== */
 
+section.wrapper {
+    flex: 1;
+
+    display: flex;
+    flex-flow: column nowrap;
+
+    justify-content: center;
+}
+
 article {
     /* display: flex;
     flex-flow: column nowrap; */
+    vertical-align: middle;
 
     width: 800px;
     height: 600px;
@@ -152,7 +189,9 @@ article#abt > section {
     width: inherit;
 
     box-shadow: 6px 6px 0 rgba(0,0,0,0.3);
-    font-size: large;
+    font-size: larger;
+
+    font-family: 'Helvetica', 'M+', sans-serif;
 }
 
 section#luis {
@@ -204,11 +243,22 @@ article#platform {
     background-color: rgb(49,0,64);
 }
 
+article#platform > section {
+    font-family: 'Linux Libertine', 'Times New Roman', serif;
+}
+
+article#platform > nav {
+    font-family: 'Helvetica', 'M+', sans-serif;
+}
+
 article#vote > section {
 
     padding: 20px;
 
     border-radius: 20px;
+
+    font-size: x-large;
+    font-family: 'Helvetica','M+',sans-serif;
 
     background-color: rgb(255,255,255,0.3);
 }
@@ -228,3 +278,5 @@ a {
     text-decoration: underline;
     color: rgb(250,159,181);
 }
+
+/* Media queries */
