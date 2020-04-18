@@ -4,11 +4,19 @@
 }
 
 html {
+    display: flex;
+    flex-flow: column nowrap;
+
+    align-items: center;
+    justify-content: center;
+
     background-color: rgb(73,0,106);
 }
 
 body {
-    margin: 0 auto;
+    flex: 1;
+    
+    margin: auto;
 
     display: flex;
     flex-flow: column nowrap;
@@ -25,7 +33,7 @@ header {
 
     align-items: center;
 
-    height: 125px;
+    height: 100px;
     margin: 20px auto 0 auto;
 }
 
@@ -38,7 +46,7 @@ nav.menu {
     width: 800px;
     height: 100px;
 
-    margin: 20px auto;
+    margin: 10px auto;
 
 }
 
@@ -93,7 +101,7 @@ nav.branches {
     display: flex;
     flex-direction: row wrap;
 
-    background-color: rgb(73, 0, 106);
+    background-color: rgb(49,0,64);
     box-shadow: 0 5px 5px rgb(0,0,0,0.3);
 
     width: 100%;
@@ -163,6 +171,7 @@ section#luis {
 section#luis > p {
     margin-left: 210px;
     margin-right: 10px;
+    font-size: 18px;
 }
 
 section#karyn {
@@ -180,6 +189,7 @@ section#karyn {
 section#karyn > p {
     margin-right: 210px;
     /* margin-left: 10px; */
+    font-size: 18px;
 }
 
 article#platform {
@@ -188,9 +198,10 @@ article#platform {
 
     text-indent: 2em;
     font-size: larger;
-    height: 500px;
+    height: 600px;
 
-    background-color: rgb(73,0,106);
+    /* background-color: rgb(73,0,106); */
+    background-color: rgb(49,0,64);
 }
 
 article#vote > section {
@@ -210,6 +221,7 @@ blockquote {
     border-top: 2px solid rgba(255,255,255,0.3);
     border-bottom: 2px solid rgba(255,255,255,0.3);
     padding: 5px 3px;
+    font-style: italic;
 }
 
 a {
