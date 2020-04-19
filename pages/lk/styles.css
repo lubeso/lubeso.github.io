@@ -164,13 +164,14 @@ section.wrapper {
     display: flex;
     flex-flow: column nowrap;
 
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 article {
-    /* display: flex;
-    flex-flow: column nowrap; */
-    vertical-align: middle;
+    display: flex;
+    flex-flow: column nowrap;
+    vertical-align: top;
 
     width: 800px;
     height: 600px;
@@ -726,112 +727,6 @@ a {
     }
 }
 
-/* iPhone 6+, 7+, and 8+ */
-@media only screen 
-    and (min-width: 414px) 
-    and (max-width: 736px) 
-    and (orientation: portrait) 
-    and (-webkit-min-device-pixel-ratio: 2) {
-    header {
-        height: 100px;
-        width: 100%;
-        margin: 0 auto;
-    
-        background-image: url('img/icon.svg');
-        background-size: contain;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-color: rgba(0,0,0,0);
-    }
-
-    nav.menu {
-        margin: 1vh auto;
-        width: 100%;
-        height: 8vh;
-    }
-
-    nav.menu > section {
-        font-size: 13px;
-    }
-
-    nav.branches {
-        height: 10vh;
-    }
-
-    nav.branches > section {
-        font-size: 12px;
-    }
-
-    article {
-        width: inherit;
-        height: 30vh;
-    }
-
-    article#abt > section {
-        height: 20vh;
-        font-size: 10px;
-        margin: 0 0 4vh 0;
-        background-size: 15vh;
-        background-color: unset;
-        box-shadow: unset;
-        border: unset;
-    }
-    
-    section#karyn {
-        background-position: left;
-    }
-
-    section#luis > p {
-        font-size: 13px;
-        padding: 3px;
-        margin-left: 16vh;
-        margin-right: 2px;
-        background-color: rgba(171,43,86,0.3);
-    }
-
-    section#karyn > p {
-        text-align: left;
-        font-size: 13px;
-        padding: 3px;
-        margin-left: 16vh;
-        margin-right: 2px;
-        background-color: rgba(93,136,147,0.3);
-    }
-
-    article#platform {
-        padding: 10px;
-        overflow: scroll;
-        height: 65vh;
-        width: 330px;
-
-        text-indent: 0;
-    }
-
-    article#platform > nav {
-        font-size: 14px;
-    }
-    
-    article#platform > section {
-        font-size: 14px;
-    }
-
-    nav.branches {
-        top: -10px;
-        width: 330px;
-    }
-
-    article#vote > section {
-        margin: 10px auto;
-        font-size: 16px;
-    }
-
-    blockquote {
-        margin: 5px auto;
-        line-height: 1.3;
-        width: 90%;
-    }
-}
-
 /* iPhone X */
 @media only screen 
     and (min-width: 375px) 
@@ -871,7 +766,7 @@ a {
 
     article {
         width: inherit;
-        height: 30vh;
+        /* height: 30vh; */
     }
 
     article#abt > section {
@@ -926,7 +821,6 @@ a {
     }
     
     article#vote > section {
-        transform: translateY(-50%);
         font-size: 16px;
     }
 
@@ -976,7 +870,7 @@ a {
 
     article {
         width: inherit;
-        height: 30vh;
+        /* height: 30vh; */
     }
 
     article#abt > section {
@@ -1013,7 +907,7 @@ a {
     article#platform {
         padding: 10px;
         overflow: scroll;
-        height: 65vh;
+        height: 60vh;
         width: 330px;
 
         text-indent: 0;
@@ -1033,7 +927,115 @@ a {
     }
     
     article#vote > section {
-        transform: translateY(5%);
+        /* transform: translateY(5%); */
+        font-size: 16px;
+    }
+
+    blockquote {
+        margin: 5px auto;
+        line-height: 1.3;
+        width: 90%;
+    }
+}
+
+/* iPhone 6+, 7+, and 8+ */
+@media only screen 
+    and (min-width: 414px) 
+    and (max-width: 736px) 
+    and (orientation: portrait) 
+    and (-webkit-min-device-pixel-ratio: 2) {
+    header {
+        height: 100px;
+        width: 100%;
+        margin: 0 auto;
+    
+        background-image: url('img/icon.svg');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: rgba(0,0,0,0);
+    }
+
+    nav.menu {
+        margin: 1vh auto;
+        width: 100%;
+        height: 8vh;
+    }
+
+    nav.menu > section {
+        font-size: 13px;
+    }
+
+    nav.branches {
+        height: 10vh;
+    }
+
+    nav.branches > section {
+        font-size: 12px;
+    }
+
+    article {
+        width: inherit;
+        /* height: 40vh; */
+
+        vertical-align: top;
+    }
+
+    article#abt > section {
+        height: 20vh;
+        font-size: 10px;
+        margin: 0 0 4vh 0;
+        background-size: 15vh;
+        background-color: unset;
+        box-shadow: unset;
+        border: unset;
+    }
+    
+    section#karyn {
+        background-position: left;
+    }
+
+    section#luis > p {
+        font-size: 13px;
+        padding: 3px;
+        margin-left: 16vh;
+        margin-right: 2px;
+        background-color: rgba(171,43,86,0.3);
+    }
+
+    section#karyn > p {
+        text-align: left;
+        font-size: 13px;
+        padding: 3px;
+        margin-left: 16vh;
+        margin-right: 2px;
+        background-color: rgba(93,136,147,0.3);
+    }
+
+    article#platform {
+        padding: 10px;
+        overflow: scroll;
+        height: 60vh;
+        width: 330px;
+
+        text-indent: 0;
+    }
+
+    article#platform > nav {
+        font-size: 14px;
+    }
+    
+    article#platform > section {
+        font-size: 14px;
+    }
+
+    nav.branches {
+        top: -10px;
+        width: 330px;
+    }
+
+    article#vote > section {
+        margin: 10px auto;
         font-size: 16px;
     }
 
