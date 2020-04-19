@@ -10,48 +10,43 @@
     src: url('fonts/libertine/LinLibertine_R.otf');
 }
 
-/* @font-face {
-    font-family: 'Linux Libertine';
-    font-style: italic;
-    src: url('fonts/libertine/LinLibertine_I.otf');
-} */
-
 @font-face {
     font-family: 'Linux Libertine';
     font-weight: bold;
     src: url('fonts/libertine/LinLibertine_RB.otf');
 }
 
+
 * {
     color: white;
     line-height: 1.6;
 }
 
-html {
-    background-color: rgb(73,0,106);
-}
-
 body {
     display: flex;
     flex-flow: column nowrap;
-    
-    height: 100vh;
-
+    height: 96vh;
     align-items: center;
-    /* justify-content: center; */
-
+    justify-content: center;
     padding: 5px;
+    background-color: rgb(73,0,106);
 }
 
 header {
     flex: 0 1 auto;
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: row nowrap;
 
     align-items: flex-end;
 
     height: 100px;
-    margin: 0 auto 0 auto;
+    width: 800px;
+    margin: 0 auto;
+
+    background-image: url('img/icon.svg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 footer {
@@ -227,7 +222,7 @@ section#karyn {
 
 section#karyn > p {
     margin-right: 210px;
-    /* margin-left: 10px; */
+    margin-left: 10px;
     font-size: 18px;
 }
 
@@ -245,6 +240,7 @@ article#platform {
 
 article#platform > section {
     font-family: 'Linux Libertine', 'Times New Roman', serif;
+    font-size: 24px;
 }
 
 article#platform > nav {
@@ -280,3 +276,770 @@ a {
 }
 
 /* Media queries */
+
+/* iPad portrait */
+@media only screen 
+    and (min-width: 768px) 
+    and (max-height: 1024px) 
+    and (orientation: portrait) 
+    and (-webkit-min-device-pixel-ratio: 2) {
+    header {
+        height: 100px;
+        width: 100%;
+        margin: 0 auto;
+    
+        background-image: url('img/icon.svg');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: rgba(0,0,0,0);
+    }
+
+    nav.menu {
+        margin: 1vh auto;
+        width: 90%;
+        height: 8vh;
+    }
+
+    nav.menu > section {
+        font-size: 2vh;
+    }
+
+    nav.branches {
+        height: 10vh;
+    }
+
+    nav.branches > section {
+        font-size: 12px;
+    }
+
+    article {
+        width: inherit;
+        height: 30vh;
+    }
+
+    article#abt > section {
+        height: 24vh;
+        margin: 0 0 2vh 0;
+        background-size: 14vh;
+        background-color: unset;
+        box-shadow: unset;
+        border: unset;
+    }
+    
+    section#karyn {
+        background-position: left;
+    }
+    
+    article#abt > section > p {
+        font-size: 20px;
+        padding: 1vh;
+        margin-left: 16vh;
+        margin-right: 2vh;
+        /* background-color: unset; */
+    }
+
+    section#luis > p {
+        background-color: rgba(171,43,86,0.3);
+    }
+
+    section#karyn > p {
+        text-align: left;
+        background-color: rgba(93,136,147,0.3);
+    }
+
+    article#platform {
+        padding: 3vh;
+        overflow: scroll;
+        margin: 0 auto;
+
+        height: 65vh;
+        width: 80vw;
+
+        text-indent: 0;
+    }
+
+    article#platform > nav {
+        width: inherit;
+
+        margin: 0 auto;
+    }
+    
+    article#platform > section, article#platform > nav > section {
+        font-size: 22px;
+    }
+
+    nav.branches {
+        top: -4vh;
+        width: 330px;
+    }
+
+    article#vote {
+        width: 80vw;
+    }
+    
+    article#vote > section {
+        font-size: 32px;
+    }
+
+    blockquote {
+        margin: 5px auto;
+        line-height: 1.3;
+        width: 90%;
+    }
+}
+
+/* iPad landscape */
+@media only screen 
+    and (min-width: 1024px) 
+    and (max-height: 768px) 
+    and (orientation: landscape) {
+
+    header {
+        height: 100px;
+        width: 100%;
+        margin: 0 auto;
+    
+        background-image: url('img/icon.svg');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: rgba(0,0,0,0);
+    }
+
+    nav.menu {
+        margin: 1vh auto;
+        width: 90%;
+        height: 8vh;
+    }
+
+    nav.menu > section {
+        font-size: 2vh;
+    }
+
+    nav.branches {
+        height: 10vh;
+    }
+
+    nav.branches > section {
+        font-size: 12px;
+    }
+
+    article {
+        width: 95vw;
+        height: 30vh;
+    }
+
+    article#abt > section {
+        height: 20vw;
+        margin: 0 0 2vw 0;
+        background-size: 15vw;
+        /* background-color: unset;
+        box-shadow: unset;
+        border: unset; */
+    }
+
+    
+    article#abt > section > p {
+        font-size: 20px;
+        padding: 1vw;
+        background-color: unset;
+    }
+
+    section#luis > p {
+        margin-left: 15vw;
+        margin-right: 2vh;
+        background-color: rgba(171,43,86,0.3);
+    }
+
+    section#karyn > p {
+        margin-right: 15vw;
+        margin-left: 2vw;
+        background-color: rgba(93,136,147,0.3);
+    }
+
+    article#platform {
+        padding: 3vw;
+        overflow: scroll;
+        margin: 0 auto;
+
+        height: 55vh;
+        width: 80vw;
+
+        /* text-indent: 0; */
+    }
+
+    article#platform > nav {
+        width: inherit;
+        height: 15vh;
+
+        margin: 0 auto;
+    }
+    
+    article#platform > section, article#platform > nav > section {
+        font-size: 22px;
+    }
+
+    nav.branches {
+        top: -4vh;
+        width: 330px;
+    }
+
+    article#vote {
+        width: 80vw;
+    }
+    
+    article#vote > section {
+        font-size: 32px;
+    }
+
+    blockquote {
+        margin: 5px auto;
+        line-height: 1.3;
+        width: 90%;
+    }
+}
+
+/* iPad Pro portrait */
+@media only screen  
+    and (min-width: 1024px) 
+    and (max-width: 1024px)
+    and (orientation: portrait)
+    and (-webkit-min-device-pixel-ratio: 2) {
+    header {
+        height: 100px;
+        width: 100%;
+        margin: 0 auto;
+    
+        background-image: url('img/icon.svg');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: rgba(0,0,0,0);
+    }
+
+    nav.menu {
+        margin: 1vh auto;
+        width: 90%;
+        height: 8vh;
+    }
+
+    nav.menu > section {
+        font-size: 2vh;
+    }
+
+    nav.branches {
+        height: 10vh;
+    }
+
+    nav.branches > section {
+        font-size: 12px;
+    }
+
+    article {
+        width: inherit;
+        height: 30vh;
+    }
+
+    article#abt > section {
+        height: 24vh;
+        margin: 0 0 2vh 0;
+        background-size: 14vh;
+        background-color: unset;
+        box-shadow: unset;
+        border: unset;
+    }
+    
+    section#karyn {
+        background-position: left;
+    }
+    
+    article#abt > section > p {
+        font-size: 2vh;
+        padding: 1vh;
+        margin-left: 15vh;
+        margin-right: 2vh;
+        /* background-color: unset; */
+    }
+
+    section#luis > p {
+        background-color: rgba(171,43,86,0.3);
+    }
+
+    section#karyn > p {
+        text-align: left;
+        background-color: rgba(93,136,147,0.3);
+    }
+
+    article#platform {
+        padding: 3vh;
+        overflow: scroll;
+        margin: 0 auto;
+
+        height: 65vh;
+        width: 80vw;
+
+        text-indent: 0;
+    }
+
+    article#platform > nav {
+        width: 80vw;
+
+        margin: 0 auto;
+    }
+    
+    article#platform > section, article#platform > nav > section {
+        padding: 1vw;
+        font-size: 3vw;
+    }
+
+    nav.branches {
+        top: -3vh;
+        width: 330px;
+    }
+
+    article#vote {
+        width: 80vw;
+    }
+    
+    article#vote > section {
+        font-size: 32px;
+    }
+
+    blockquote {
+        margin: 5px auto;
+        line-height: 1.3;
+        width: 90%;
+    }
+}
+
+/* iPad Pro landscape */
+@media only screen
+    and (min-width: 1366px) 
+    and (max-width: 1366px) 
+    and (orientation: landscape)
+    and (-webkit-min-device-pixel-ratio: 2) {
+
+    header {
+        height: 100px;
+        width: 100%;
+        margin: 0 auto;
+    
+        background-image: url('img/icon.svg');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: rgba(0,0,0,0);
+    }
+
+    nav.menu {
+        margin: 1vh auto;
+        width: 90%;
+        height: 8vh;
+    }
+
+    nav.menu > section {
+        font-size: 2vh;
+    }
+
+    nav.branches {
+        height: 10vh;
+    }
+
+    nav.branches > section {
+        font-size: 12px;
+    }
+
+    article {
+        width: 95vw;
+        height: 30vh;
+    }
+
+    article#abt > section {
+        height: 20vw;
+        margin: 0 0 2vw 0;
+        background-size: 15vw;
+        /* background-color: unset;
+        box-shadow: unset;
+        border: unset; */
+    }
+
+    article#abt > section > p {
+        font-size: 2vw;
+        padding: 1vw;
+        background-color: unset;
+    }
+
+    section#luis > p {
+        margin-left: 15vw;
+        margin-right: 2vh;
+        background-color: rgba(171,43,86,0.3);
+    }
+
+    section#karyn > p {
+        margin-right: 15vw;
+        margin-left: 2vw;
+        background-color: rgba(93,136,147,0.3);
+    }
+
+    article#platform {
+        padding: 3vw;
+        overflow: scroll;
+        margin: 2vw auto;
+
+        height: 55vh;
+        width: 80vw;
+
+        /* text-indent: 0; */
+    }
+
+    article#platform > nav {
+        width: inherit;
+        height: 15vh;
+
+        /* font-size: 3vw; */
+        margin: 0 auto;
+    }
+    
+    article#platform > section, article#platform > nav > section {
+        font-size: 2vw;
+        padding: 1vw;
+    }
+
+    nav.branches {
+        top: -4vh;
+        width: 330px;
+    }
+
+    article#vote {
+        width: 80vw;
+    }
+    
+    article#vote > section {
+        font-size: 32px;
+    }
+
+    blockquote {
+        margin: 5px auto;
+        line-height: 1.3;
+        width: 90%;
+    }
+}
+
+/* iPhone 6+, 7+, and 8+ */
+@media only screen 
+    and (min-width: 414px) 
+    and (max-width: 736px) 
+    and (orientation: portrait) 
+    and (-webkit-min-device-pixel-ratio: 2) {
+    header {
+        height: 100px;
+        width: 100%;
+        margin: 0 auto;
+    
+        background-image: url('img/icon.svg');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: rgba(0,0,0,0);
+    }
+
+    nav.menu {
+        margin: 1vh auto;
+        width: 100%;
+        height: 8vh;
+    }
+
+    nav.menu > section {
+        font-size: 13px;
+    }
+
+    nav.branches {
+        height: 10vh;
+    }
+
+    nav.branches > section {
+        font-size: 12px;
+    }
+
+    article {
+        width: inherit;
+        height: 30vh;
+    }
+
+    article#abt > section {
+        height: 20vh;
+        font-size: 10px;
+        margin: 0 0 4vh 0;
+        background-size: 15vh;
+        background-color: unset;
+        box-shadow: unset;
+        border: unset;
+    }
+    
+    section#karyn {
+        background-position: left;
+    }
+
+    section#luis > p {
+        font-size: 13px;
+        padding: 3px;
+        margin-left: 16vh;
+        margin-right: 2px;
+        background-color: rgba(171,43,86,0.3);
+    }
+
+    section#karyn > p {
+        text-align: left;
+        font-size: 13px;
+        padding: 3px;
+        margin-left: 16vh;
+        margin-right: 2px;
+        background-color: rgba(93,136,147,0.3);
+    }
+
+    article#platform {
+        padding: 10px;
+        overflow: scroll;
+        height: 65vh;
+        width: 330px;
+
+        text-indent: 0;
+    }
+
+    article#platform > nav {
+        font-size: 14px;
+    }
+    
+    article#platform > section {
+        font-size: 14px;
+    }
+
+    nav.branches {
+        top: -10px;
+        width: 330px;
+    }
+
+    article#vote > section {
+        margin: 10px auto;
+        font-size: 16px;
+    }
+
+    blockquote {
+        margin: 5px auto;
+        line-height: 1.3;
+        width: 90%;
+    }
+}
+
+/* iPhone X */
+@media only screen 
+    and (min-width: 375px) 
+    and (max-width: 812px) 
+    and (orientation: portrait) 
+    and (-webkit-min-device-pixel-ratio: 3) {
+
+    header {
+        height: 100px;
+        width: 100%;
+        margin: 0 auto;
+    
+        background-image: url('img/icon.svg');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: rgba(0,0,0,0);
+    }
+
+    nav.menu {
+        margin: 1vh auto;
+        width: 100%;
+        height: 8vh;
+    }
+
+    nav.menu > section {
+        font-size: 13px;
+    }
+
+    nav.branches {
+        height: 10vh;
+    }
+
+    nav.branches > section {
+        font-size: 12px;
+    }
+
+    article {
+        width: inherit;
+        height: 30vh;
+    }
+
+    article#abt > section {
+        height: 20vh;
+        margin: 0 0 5vh 0;
+        background-size: 13vh;
+        box-shadow: unset;
+        border: unset;
+    }
+    
+    section#karyn {
+        background-position: left;
+    }
+
+    section#luis > p {
+        font-size: 8px;
+        padding: 3px;
+        margin-left: 14vh;
+        margin-right: 2px;
+        background-color: rgba(171,43,86,0.3);
+    }
+
+    section#karyn > p {
+        text-align: left;
+        font-size: 10px;
+        padding: 3px;
+        margin-left: 14vh;
+        margin-right: 2px;
+        background-color: rgba(93,136,147,0.3);
+    }
+
+    article#platform {
+        padding: 10px;
+        overflow: scroll;
+        height: 65vh;
+        width: 330px;
+
+        text-indent: 0;
+    }
+
+    article#platform > nav {
+        font-size: 14px;
+    }
+    
+    article#platform > section {
+        font-size: 14px;
+    }
+
+    nav.branches {
+        top: -10px;
+        width: 330px;
+    }
+    
+    article#vote > section {
+        transform: translateY(-50%);
+        font-size: 16px;
+    }
+
+    blockquote {
+        margin: 5px auto;
+        line-height: 1.3;
+        width: 90%;
+    }
+}
+
+/* iPhone 6, 6S, 7 and 8 */
+@media only screen 
+    and (min-width: 375px) 
+    and (max-width: 667px) 
+    and (orientation: portrait) 
+    and (-webkit-min-device-pixel-ratio: 2) {
+
+    header {
+        height: 100px;
+        width: 100%;
+        margin: 0 auto;
+    
+        background-image: url('img/icon.svg');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: rgba(0,0,0,0);
+    }
+
+    nav.menu {
+        margin: 1vh auto;
+        width: 100%;
+        height: 8vh;
+    }
+
+    nav.menu > section {
+        font-size: 13px;
+    }
+
+    nav.branches {
+        height: 10vh;
+    }
+
+    nav.branches > section {
+        font-size: 12px;
+    }
+
+    article {
+        width: inherit;
+        height: 30vh;
+    }
+
+    article#abt > section {
+        height: 20vh;
+        font-size: 8px;
+        margin: 0 0 4vh 0;
+        background-size: 15vh;
+        background-color: unset;
+        box-shadow: unset;
+        border: unset;
+    }
+    
+    section#karyn {
+        background-position: left;
+    }
+
+    section#luis > p {
+        font-size: 11px;
+        padding: 3px;
+        margin-left: 16vh;
+        margin-right: 2px;
+        background-color: rgba(171,43,86,0.3);
+    }
+
+    section#karyn > p {
+        text-align: left;
+        font-size: 11px;
+        padding: 3px;
+        margin-left: 16vh;
+        margin-right: 2px;
+        background-color: rgba(93,136,147,0.3);
+    }
+
+    article#platform {
+        padding: 10px;
+        overflow: scroll;
+        height: 65vh;
+        width: 330px;
+
+        text-indent: 0;
+    }
+
+    article#platform > nav {
+        font-size: 14px;
+    }
+    
+    article#platform > section {
+        font-size: 14px;
+    }
+
+    nav.branches {
+        top: -10px;
+        width: 330px;
+    }
+    
+    article#vote > section {
+        transform: translateY(5%);
+        font-size: 16px;
+    }
+
+    blockquote {
+        margin: 5px auto;
+        line-height: 1.3;
+        width: 90%;
+    }
+}
