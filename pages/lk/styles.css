@@ -316,7 +316,7 @@ a {
 
     article {
         width: inherit;
-        height: 30vh;
+        height: 60vh;
     }
 
     article#abt > section {
@@ -354,7 +354,7 @@ a {
         overflow: scroll;
         margin: 0 auto;
 
-        height: 65vh;
+        height: 60vh;
         width: 80vw;
 
         text-indent: 0;
@@ -428,7 +428,7 @@ a {
 
     article {
         width: 95vw;
-        height: 30vh;
+        height: 60vh;
     }
 
     article#abt > section {
@@ -766,7 +766,7 @@ a {
 
     article {
         width: inherit;
-        /* height: 30vh; */
+        height: 60vh;
     }
 
     article#abt > section {
@@ -870,7 +870,7 @@ a {
 
     article {
         width: inherit;
-        /* height: 30vh; */
+        height: 60vh;
     }
 
     article#abt > section {
@@ -976,7 +976,7 @@ a {
 
     article {
         width: inherit;
-        /* height: 40vh; */
+        height: 60vh;
 
         vertical-align: top;
     }
