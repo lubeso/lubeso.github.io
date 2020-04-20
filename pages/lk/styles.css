@@ -39,7 +39,7 @@ header {
 
     align-items: flex-end;
 
-    height: 100px;
+    height: 10vh;
     width: 800px;
     margin: 0 auto;
 
@@ -117,7 +117,7 @@ section#rite {
 
 nav.branches {
     position: relative;
-    margin: 0 auto;
+    margin: 1em auto;
 
     display: flex;
     flex-direction: row wrap;
@@ -132,7 +132,7 @@ nav.branches {
 nav.branches > section {
     flex: 1;
 
-    padding: 5px;
+    padding: 1ex;
 
     font-size: larger;
     font-weight: bold;
@@ -226,23 +226,26 @@ section#karyn > p {
 }
 
 article#platform {
-    padding: 20px;
     overflow: scroll;
 
+    padding: 1em;
     text-indent: 2em;
     font-size: larger;
+    width: 90%;
     height: 600px;
-
     background-color: rgb(49,0,64);
 }
 
 article#platform > section {
     font-family: 'Linux Libertine', 'Times New Roman', serif;
     font-size: 24px;
+    padding: 1em;
+    margin: auto;
 }
 
 article#platform > nav {
     font-family: 'Helvetica', 'M+', sans-serif;
+    margin: 1em auto;
 }
 
 article#vote > section {
@@ -282,7 +285,7 @@ a {
     and (orientation: portrait) 
     and (-webkit-min-device-pixel-ratio: 2) {
     header {
-        height: 100px;
+        /* height: 100px; */
         width: 100%;
         margin: 0 auto;
     
@@ -304,6 +307,7 @@ a {
     }
 
     nav.branches {
+        margin: 1vh auto;
         height: 10vh;
     }
 
@@ -358,17 +362,11 @@ a {
 
     article#platform > nav {
         width: inherit;
-        margin: 0 auto;
+        /* margin: 1em auto; */
     }
     
     article#platform > section, article#platform > nav > section {
         font-size: 22px;
-    }
-
-    nav.branches {
-        position: relative;
-        height: 300px;
-        width: 330px;
     }
 
     article#vote {
@@ -393,7 +391,7 @@ a {
     and (orientation: landscape) {
 
     header {
-        height: 100px;
+        /* height: 100px; */
         width: 100%;
         margin: 0 auto;
     
@@ -416,6 +414,7 @@ a {
 
     nav.branches {
         position: relative;
+        margin: 1em auto; 
         height: 10vh;
     }
 
@@ -471,7 +470,7 @@ a {
         width: inherit;
         height: 15vh;
 
-        margin: 0 auto;
+        margin: 1vh auto;
     }
     
     article#platform > section, article#platform > nav > section {
@@ -500,7 +499,7 @@ a {
     and (orientation: portrait)
     and (-webkit-min-device-pixel-ratio: 2) {
     header {
-        height: 100px;
+        /* height: 100px; */
         width: 100%;
         margin: 0 auto;
     
@@ -522,8 +521,10 @@ a {
     }
 
     nav.branches {
+        margin: 2vh auto;
         position: relative;
         height: 10vh;
+        width: 80vw;
     }
 
     nav.branches > section {
@@ -568,28 +569,17 @@ a {
     article#platform {
         padding: 3vh;
         overflow: scroll;
-        margin: 0 auto;
+        margin: 1vw auto;
 
         height: 65vh;
         width: 80vw;
 
         text-indent: 0;
     }
-
-    article#platform > nav {
-        width: 80vw;
-
-        margin: 0 auto;
-    }
     
     article#platform > section, article#platform > nav > section {
         padding: 1vw;
         font-size: 3vw;
-    }
-
-    nav.branches {
-        position: relative;
-        width: 330px;
     }
 
     article#vote {
@@ -615,7 +605,7 @@ a {
     and (-webkit-min-device-pixel-ratio: 2) {
 
     header {
-        height: 100px;
+        /* height: 100px; */
         width: 100%;
         margin: 0 auto;
     
@@ -683,8 +673,6 @@ a {
 
         height: 55vh;
         width: 80vw;
-
-        /* text-indent: 0; */
     }
 
     article#platform > nav {
@@ -692,18 +680,12 @@ a {
         height: 15vh;
 
         /* font-size: 3vw; */
-        margin: 0 auto;
+        margin: 2vw auto;
     }
     
     article#platform > section, article#platform > nav > section {
         font-size: 2vw;
         padding: 1vw;
-    }
-
-    nav.branches {
-        position: relative;
-        top: -4vh;
-        width: 330px;
     }
 
     article#vote {
@@ -729,7 +711,7 @@ a {
     and (-webkit-min-device-pixel-ratio: 3) {
 
     header {
-        height: 100px;
+        /* height: 100px; */
         width: 100%;
         margin: 0 auto;
     
@@ -834,7 +816,7 @@ a {
     and (-webkit-min-device-pixel-ratio: 2) {
 
     header {
-        height: 100px;
+        /* height: 10vh; */
         width: 100%;
         margin: 0 auto;
     
@@ -856,7 +838,7 @@ a {
     }
 
     nav.branches {
-        position: relative;
+        /* position: relative; */
         height: 10vh;
     }
 
@@ -918,7 +900,7 @@ a {
     }
 
     nav.branches {
-        margin: 0 auto;
+        margin: 1em auto 1em auto;
         height: 300px;
         width: 330px;
     }
@@ -942,7 +924,7 @@ a {
     and (-webkit-min-device-pixel-ratio: 2) {
 
     header {
-        height: 100px;
+        /* height: 100px; */
         width: 100%;
         margin: 0 auto;
     
@@ -964,7 +946,7 @@ a {
     }
 
     nav.branches {
-        position: relative;
+        
         height: 10vh;
     }
 
@@ -1011,7 +993,7 @@ a {
     }
 
     article#platform {
-        padding: 10px;
+        /* padding: 10px; */
         overflow: scroll;
         height: 60vh;
         width: 330px;
