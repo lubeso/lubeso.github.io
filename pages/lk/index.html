@@ -85,7 +85,6 @@
                 <li>Promoting spaces on campus for students to lounge and hang out, perform, communicate, etc.</li>
             </ul>
             </section>
-
             <section id='adstud' style='display: none;'>
                 <blockquote style='font-size: larger;'>It is our goal that if a student has any opinion or concern regarding the undergraduate experience, they should not forfeit having their voice heard because of a belief that the feedback process is not worth their time or energy. </blockquote>
 
@@ -122,10 +121,8 @@
                     <li><strong>Student involvement:</strong> The purpose of these committees is to have student voice and perspective at the discussion table throughout our campus. Committees will keep students up-to-date with their proceedings, and campus resources will better understand our needs.</li>
                 </ul>
             
-            </p>
-                
+            </p>   
             </section>
-
             <section id='ugrad' style='display:none;'>
                 <blockquote style='font-size: larger;'>
                     MIT is a collaborative environment&mdash;when we work together, students develop meaningful connections with each other, but mostly as a result of mutual suffering. We should pride ourselves in how happy our undergraduates are, not how much work they can push out.
@@ -257,7 +254,7 @@
             $(b).fadeOut(750,function () {
                 $('#abt').fadeIn(750);
             });
-            
+
         } else if (!b) {
             $('#abt').fadeIn(1500);
         }
@@ -267,9 +264,8 @@
         var b = check();
         if (typeof b === 'string' && b !== '#platform') {
             $(b).fadeOut(750,function () {
-                $('#platform').fadeIn(750);
+                $('#platform').fadeIn(375);
             });
-            
         } else if (!b) {
             $('#platform').fadeIn(1500);
         }
