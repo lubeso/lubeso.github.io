@@ -363,7 +363,6 @@ a {
 
     article#platform > nav {
         width: inherit;
-
         margin: 0 auto;
     }
     
@@ -372,6 +371,7 @@ a {
     }
 
     nav.branches {
+        position: relative;
         top: -4vh;
         width: 330px;
     }
@@ -420,6 +420,7 @@ a {
     }
 
     nav.branches {
+        position: relative;
         height: 10vh;
     }
 
@@ -482,8 +483,6 @@ a {
         font-size: 22px;
     }
 
-
-
     article#vote {
         width: 80vw;
     }
@@ -528,6 +527,7 @@ a {
     }
 
     nav.branches {
+        position: relative;
         height: 10vh;
     }
 
@@ -593,6 +593,7 @@ a {
     }
 
     nav.branches {
+        position: relative;
         top: -3vh;
         width: 330px;
     }
@@ -706,6 +707,7 @@ a {
     }
 
     nav.branches {
+        position: relative;
         top: -4vh;
         width: 330px;
     }
@@ -755,6 +757,7 @@ a {
     }
 
     nav.branches {
+        position: relative;
         height: 10vh;
     }
 
@@ -859,6 +862,7 @@ a {
     }
 
     nav.branches {
+        position: relative;
         height: 10vh;
     }
 
@@ -920,12 +924,12 @@ a {
     }
 
     nav.branches {
+        /* position: fixed; */
         top: -10px;
         width: 330px;
     }
     
     article#vote > section {
-        /* transform: translateY(5%); */
         font-size: 16px;
     }
 
@@ -965,6 +969,7 @@ a {
     }
 
     nav.branches {
+        position: relative;
         height: 10vh;
     }
 
