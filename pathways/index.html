@@ -8,11 +8,10 @@
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
     </head>
     <body>
-        <main>
+        <!-- <main> -->
             <section id='TITLE'>
-                <h1>Pathways</h1>
-                <h3>Education Accessibility in NYC</h3>
-                <!-- <p><em>Luis &amp; Karyn</em></p> -->
+                <h1>Pathways: High School Accessibility in NYC</h3>
+                <h3><em>Luis &amp; Karyn</em></h3>
             </section>
             <section id='CONTEXT'>
                 <!-- <h2>Context</h2> -->
@@ -27,45 +26,38 @@
                 <h2><em>Which factors influence commute times?</em></h2>
             </section>
             <section id='GEOGRAPHY'>
-                <article class='LEFT'>
                 <h2>Geography</h2>
-                <p>Our interactive map displays the distribution of commute time across census tracts in four boroughs: Manhattan, Bronx, Queens, and Brooklyn. We did not include Staten Island due to its restricted access to public transport and smaller population density.</p>
-
-                <p>You can hover over any tract for the tract name, average commute in minutes, median income, and a beeswarm plot. Each dot on a beeswarm plot is a school colored according to its achievement score, and positioned according to commute time from the census tract.</p>
-                </article>
-                <article class='RIGHT'>
-                    <iframe height='700' width='1000' src='src/traveltime.html'></iframe>
-                </article>
+                <p>Our interactive map displays the distribution of commute time across census tracts in four boroughs: Manhattan, Bronx, Queens, and Brooklyn. We did not include Staten Island due to its restricted access to public transport and smaller population density. You can hover over any tract for the tract name, average commute in minutes, median income, and a beeswarm plot. Each dot on a beeswarm plot is a school colored according to its achievement score, and positioned according to commute time from the census tract.</p>
+            </section>
+            <section class='MAP' style='background-color: rgb(70,33,63);'>
+                <iframe src='src/traveltime.html'></iframe>
             </section>
             <section id='SAFETY'>
-                <article class='LEFT'>
                     <h2>Safety</h2>
-                    <p>Our interactive map illustrates each NYC high school as a dot colored according to Feel Safe Percentage<textsuperscript>*</textsuperscript>, with size proportional to its Economic Need Index. Students&apos; perception of safety in their commutes influence their academic performance, and we believe it important to visualize the distribution of students&apos; wellbeing.</p>
-                    <p>You can click on any dot, and a pop-up will appear with the high school's name, Feel Safe percentage, and economic need index.</p>
-                    <aside>* Calculated using student responses to NYC Schools Survey prompt <em>&quot;I feel safe travelling to/from school&quot;</em></aside>
-                </article>
-                <article class='RIGHT'>
-                    <iframe height='700' width='1000' src='src/feelsafe.html'></iframe>
-                </article>
+                    <p>Our interactive map illustrates each NYC high school as a dot colored according to Feel Safe Percentage, with size proportional to its Economic Need Index. Students&apos; perception of safety in their commutes influence their academic performance, and we believe it important to visualize the distribution of students&apos; wellbeing. You can click on any dot, and a pop-up will appear with the high school's name, Feel Safe percentage, and economic need index.</p>
+                    <aside>A school's Economic Need Index measures the socioeconomic circumstances of a school's population and assigns a score to each school based on the number of students eligible for free lunch or public assistance or who live in temporary housing---a higher index indicates a higher economic need. The Feel Safe Percentage is calculated using student responses to NYC Schools Survey prompt <em>&quot;I feel safe travelling to/from school&quot;</em></aside>
+            </section>
+            <section class='MAP' style='background-color: rgb(68,33,61);'>
+                <iframe src='src/feelsafe.html'></iframe>
             </section>
             <section id='INCOME'>
-                <article class='RIGHT'>
-                    <iframe width='500' height='700' src='src/income.html'></iframe>
+                <article class='SCATTER' style='width: 30%;'>
+                    <iframe src='src/income.html'></iframe>
                 </article>
-                <article class='LEFT'>
+                <article class='TEXT' style='width: 70%;'>
                     <h2>Income + Mobility</h2>
                     <p>At a glance, our first map illustrates that Manhattan has the shortest average commutes of the four boroughs. Beyond geography, we wanted to determine any patterns between commutes, race, and socioeconomic status.</p>
                     <p>Tracts that are majority non-white have median incomes under &dollar;70,000 and commutes around 1 hour. In contrast, tracts with higher median incomes are majority white and have shorter, more consistent commute times.</p>
                 </article>
             </section>
             <section id='RACE'>
-                <article class='LEFT'>
+                <article class='TEXT' style='width: 50%'>
                     <h2>Race + Safety</h2>
                     <p>Our second map illustrates that Manhattan has schools with low economic need and high Feel Safe percentages. In contrast, The Bronx has high economic need and lower Feel Safe percentages. As before, we wanted to see how certain demographics are clustered based on these metrics.</p>
                     <p>Majority white schools have higher Feel Safe percentages and low economic need, whereas majority non-white schools experience higher economic need and lower Feel Safe percentages (with high variability.)</p>
                 </article>
-                <article class='RIGHT'>
-                    <iframe width='800' height='600' src='src/safety.html'></iframe>
+                <article class='SCATTER' style='width: 50%; height: 70%'>
+                    <iframe src='src/safety.html'></iframe>
                 </article>
             </section>
             <section id='NEXT'>
@@ -99,6 +91,6 @@
                     }
                 });
             </script> -->
-        </main>
+        <!-- </main> -->
     </body>
 </html>

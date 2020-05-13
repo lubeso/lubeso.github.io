@@ -4,10 +4,11 @@
 
 * {
     color: white;
+    box-sizing: border-box;
 }
 
 h1 {
-    font-size: 6em;
+    font-size: 4em;
 
     font-family: 'Roboto';
 }
@@ -20,11 +21,13 @@ h2 {
 
 h3 {
     font-size: 1.9em;
+
+    font-family: 'Roboto Thin'
 }
 
-p, ul {
+p, ul, aside {
     font-family: 'Roboto Light', sans-serif;
-    font-size: 16pt;
+    font-size: 1.8em;
 }
 
 a {
@@ -36,69 +39,52 @@ a {
 
 html {
     background-color: black;
+    width: 100%;
+    min-height: 100%;
 }
 
 body {
-    margin: 0 auto;
+    width: inherit;
+    min-height: inherit;
 
-    width: 1;
-    /* height: 1; */
-
-    padding: 1ex;
+    margin: 0;
+    padding: 0;
+    
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
 }
 
-main {
+section {
     margin: 0 auto;
 
     display: flex;
     flex-flow: column wrap;
-}
 
-section {
-    display: flex;
-    flex-flow: row wrap;
-
+    width: inherit;
     height: 100vh;
 
-    align-items: center;
+    align-items: left;
     justify-content: center;
 
     line-height: 2;
     padding: 2em;
 }
 
-article.LEFT {
+article.TEXT {
     width: 40%;
     /* padding: 1ex; */
 }
 
-article.RIGHT {
+article.SCATTER {
+    width: 60%;
+    height: 90%;
+
     display: flex;
+    flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
-
-    width: 60%;
-}
-
-section#INCOME > article.LEFT {
-    width: 70%;
-}
-
-section#INCOME > article.RIGHT {
-    width: 30%;
-}
-
-section#RACE > article.LEFT {
-    width: 50%;
-}
-
-section#RACE > article.RIGHT {
-    width: 50%;
-}
-
-section#TITLE, section#CONTEXT, 
-section#FOCUS, section#NEXT {
-    flex-flow: column nowrap;
 }
 
 section#TITLE {
@@ -124,10 +110,16 @@ section#SAFETY {
 }
 
 section#INCOME {
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: left;    
     background-color: rgb(65,32,59);
 }
 
 section#RACE {
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
     background-color: rgb(62,31,58);
 }
 
@@ -136,5 +128,18 @@ section#NEXT {
 }
 
 iframe {
+    margin: auto;
+
     border: unset;
+    overflow: hidden;
+}
+
+article.SCATTER > iframe {
+    width: 100%;
+    height: 100%;
+}
+
+section.MAP > iframe {
+    width: 100%;
+    height: 100%;
 }
