@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pathways</title>
+        <link type='text/css' rel='stylesheet' href='src/style.css'>
+        <script src='http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js'></script>
+        <script src='http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js'></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+    </head>
+    <body>
+        <main>
+            <section id='TITLE'>
+                <h1>Pathways</h1>
+                <h3>Education Accessibility in NYC</h3>
+                <!-- <p><em>Luis &amp; Karyn</em></p> -->
+            </section>
+            <section id='CONTEXT'>
+                <!-- <h2>Context</h2> -->
+                <ul>
+                    <li>One in five students have commutes of 45 minutes or longer <br><a href='https://ibo.nyc.ny.us/cgi-park2/2014/05/how-long-is-the-commute-for-new-york-city-high-school-students-from-their-homes-to-their-schools/'>&mdash; NYC By The Numbers</a></li>
+                    <li>Time spent riding the subway or bus cuts into time that could otherwise be spent on homework, sleep, or play <br><a href='https://citylimits.org/2020/03/10/super-commuters-in-sophomore-year-the-impact-of-nycs-longest-rides-to-school/'>&mdash; City Limits</a></li>
+                    <li>Limited resources prevent many homeless children from having a stable education experience <br><a href='https://www.theatlantic.com/education/archive/2016/12/shelter-versus-school/509825/'>&mdash; The Atlantic</a></li>
+                </ul>
+            </section>
+            <section id='FOCUS'>
+                <!-- <h2>Focus</h2> -->
+                <h2><em>Which factors influence commute times?</em></h2>
+            </section>
+            <section id='GEOGRAPHY'>
+                <article class='LEFT'>
+                <h2>Geography</h2>
+                <p>Our interactive map displays the distribution of commute time across census tracts in four boroughs: Manhattan, Bronx, Queens, and Brooklyn. We did not include Staten Island due to its restricted access to public transport and smaller population density.</p>
+
+                <p>You can hover over any tract for the tract name, average commute in minutes, median income, and a beeswarm plot. Each dot on a beeswarm plot is a school colored according to its achievement score, and positioned according to commute time from the census tract.</p>
+                </article>
+                <article class='RIGHT'>
+                    <iframe height='700' width='1000' src='src/traveltime.html'></iframe>
+                </article>
+            </section>
+            <section id='SAFETY'>
+                <article class='LEFT'>
+                    <h2>Safety</h2>
+                    <p>Our interactive map illustrates each NYC high school as a dot colored according to Feel Safe Percentage, with size proportional to its Economic Need Index. Students&apos; perception of safety in their commutes influence their academic performance, and we believe it important to visualize the distribution of students&apos; wellbeing.</p>
+                </article>
+                <article class='RIGHT'>
+                    <iframe height='700' width='1000' src='src/feelsafe.html'></iframe>
+                </article>
+            </section>
+            <section id='INCOME'>
+                <article class='LEFT'>
+                    <h2>Income + Mobility</h2>
+                    <p>At a glance, our first map illustrates that Manhattan has the shortest average commutes of the four boroughs. Beyond geography, we wanted to determine any patterns between commutes, race, and socioeconomic status.</p>
+                    <p>Tracts that are majority non-white have median incomes under &dollar;70,000 and commutes around 1 hour. In contrast, tracts with higher median incomes are majority white and have shorter, more consistent commute times.</p>
+                </article>
+                <article class='RIGHT'>
+                    <iframe width='600' height='800' src='src/income.html'></iframe>
+                </article>
+            </section>
+            <section id='RACE'>
+                <article class='LEFT'>
+                    <h2>Race + Safety</h2>
+                    <p>Our second map illustrates that Manhattan has schools with low economic need and high Feel Safe percentages. In contrast, The Bronx has high economic need and lower Feel Safe percentages. As before, we wanted to see how certain demographics are clustered based on these metrics.</p>
+                    <p>Majority white schools have higher Feel Safe percentages and low economic need, whereas majority non-white schools experience higher economic need and lower Feel Safe percentages (with high variability.)</p>
+                </article>
+                <article class='RIGHT'>
+                    <iframe width='900' height='700' src='src/safety.html'></iframe>
+                </article>
+            </section>
+            <section id='NEXT'>
+                <h2>What's next?</h2>
+                <p>We believe public infrastructure ought to be consistent and equitable to effectively serve communities. Our objectives with this project (and future advancements) is to inform the public and guide policy considerations.</p>
+                <ul>
+                    <li>School choice is important, but we need to ensure school quality is consistent across the board so students and families can exercise full liberty in selecting an education.</li>
+                    <li>Students&apos; economic need and safety directly influences their academic wellbeing&mdash;students shouldn&apos;t need to worry about anything other than school, at school.</li>
+                    <li>Many communities depend on public transportation for education and occupation, and it&apos;s important to ensure these systems are reliable and effective for all geographies of NYC.</li>
+                    <li>We&apos;d like our project to offer a more granular look into students&apos; commutes, incorporating direct enrollment days for census blocks, to further understand the pathway between students and their school.</li>
+                </ul>
+            </section>
+            <script>
+                $(function () {
+                    var controller = new ScrollMagic.Controller({
+                        globalSceneOptions: {
+                            triggerHook: 'onLeave',
+                            duration: '300%'
+                        }
+                    });
+
+                    var slides = document.querySelectorAll('section');
+
+                    for (var i = 0; i < slides.length; i++) {
+                        new ScrollMagic.Scene({
+                            triggerElement: slides[i]
+                        })
+                        .setPin(slides[i], {pushFollowers: false})
+                        // .addIndicators()
+                        .addTo(controller);
+                    }
+                });
+            </script>
+        </main>
+    </body>
+</html>

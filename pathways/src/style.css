@@ -1,0 +1,140 @@
+@import url('font.css');
+
+/* Types */
+
+* {
+    color: white;
+}
+
+h1 {
+    font-size: 6em;
+
+    font-family: 'Roboto';
+}
+
+h2 {
+    font-size: 3em;
+
+    font-family: 'Roboto';
+}
+
+h3 {
+    font-size: 1.9em;
+}
+
+p, ul {
+    font-family: 'Roboto Light', sans-serif;
+    font-size: 2em;
+}
+
+a {
+    color: indianred;
+    text-decoration: unset;
+}
+
+/* Containers */
+
+html {
+    background-color: black;
+}
+
+body {
+    margin: 0 auto;
+
+    width: 1;
+    /* height: 1; */
+
+    padding: 1ex;
+}
+
+main {
+    margin: 0 auto;
+
+    display: flex;
+    flex-flow: column wrap;
+}
+
+section {
+    display: flex;
+    flex-flow: row wrap;
+
+    height: 100vh;
+
+    align-items: center;
+    justify-content: center;
+
+    line-height: 2;
+    padding: 2em;
+}
+
+article.LEFT {
+    width: 40%;
+    /* padding: 1ex; */
+}
+
+article.RIGHT {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 60%;
+}
+
+section#INCOME > article.LEFT {
+    width: 70%;
+}
+
+section#INCOME > article.RIGHT {
+    width: 30%;
+}
+
+section#RACE > article.LEFT {
+    width: 50%;
+}
+
+section#RACE > article.RIGHT {
+    width: 50%;
+}
+
+section#TITLE, section#CONTEXT, 
+section#FOCUS, section#NEXT {
+    flex-flow: column nowrap;
+}
+
+section#TITLE {
+    line-height: 0.25ex;
+
+    background-color: rgb(79,36,68);
+}
+
+section#CONTEXT {
+    background-color: rgb(76,35,66);
+}
+
+section#FOCUS {
+    background-color: rgb(73,34,65);
+}
+
+section#GEOGRAPHY {
+    background-color: rgb(70,33,63);
+}
+
+section#SAFETY {
+    background-color: rgb(68,33,61);
+}
+
+section#INCOME {
+    background-color: rgb(65,32,59);
+}
+
+section#RACE {
+    background-color: rgb(62,31,58);
+}
+
+section#NEXT {
+    background-color: rgb(59,30,56);
+}
+
+iframe {
+    border: unset;
+}
