@@ -27,7 +27,7 @@ h3 {
 
 p, ul, aside {
     font-family: 'Roboto Light', sans-serif;
-    font-size: 1.8em;
+    font-size: 1.6em;
 }
 
 a {
@@ -60,7 +60,7 @@ section {
     margin: 0 auto;
 
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
 
     width: inherit;
     height: 100vh;
