@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Luis Becerra Solis" />
+  <title>Ethical Metrics</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <style type="text/css">
+html {
+font-size: 100%;
+-webkit-text-size-adjust: 100%;
+-ms-text-size-adjust: 100%;
+}
+body {
+color: #444;
+font-family: "Roboto Condensed", "Helvetica", "Arial", sans-serif;
+font-size: 12px;
+line-height: 1.7;
+padding: 1em;
+margin: auto;
+max-width: 48em;
+background: #fefefe;
+}
+
+#write {
+max-width: 860px;
+margin: 0 auto;
+padding: 20px 30px 40px 30px;
+padding-top: 20px;
+padding-bottom: 100px;
+}
+a {
+color: #0645ad;
+text-decoration: none;
+}
+a:visited {
+color: #0b0080;
+}
+a:hover {
+color: #06e;
+}
+a:active {
+color: #faa700;
+}
+a:focus {
+outline: thin dotted;
+}
+*::-moz-selection {
+background: rgba(255, 255, 0, 0.3);
+color: #000;
+}
+*::selection {
+background: rgba(255, 255, 0, 0.3);
+color: #000;
+}
+a::-moz-selection {
+background: rgba(255, 255, 0, 0.3);
+color: #0645ad;
+}
+a::selection {
+background: rgba(255, 255, 0, 0.3);
+color: #0645ad;
+}
+p {
+margin: 1em 0;
+
+}
+img {
+max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+color: #ffffff;
+background: #1A3F5E;
+line-height: 125%;
+margin-top: 2em;
+margin-bottom: 0.5em;
+text-transform: uppercase;
+}
+h2, h3 {
+font-variant: small-caps slashed-zero;
+font-weight: normal;
+padding: 0.2em;
+margin-bottom: 0;
+}
+h4, h5, h6 {
+font-weight: bold;
+}
+h1, .subtitle {
+background: #fff;
+color: #0c343d;
+text-align: center;
+}
+h1 {
+font-weight: bolder;
+font-size: 3em;
+margin-bottom: 2em;
+}
+.subtitle {
+line-height: 100%;
+margin-bottom: -3.30em;
+font-weight: normal;
+}
+h2 {
+background: #AC071A;
+font-size: 1.5em;
+}
+.heading {
+margin-bottom: 0;
+}
+.description, .Description {
+width: 100%;
+background: #f3f3f3;
+margin-top: 0;
+padding-top: 0.05em;
+padding-bottom: 0.05em;
+margin-bottom: 32px;
+}
+h3 {
+background: #405B7D;
+font-size: 1.5em;
+}
+h4 {
+font-size: 1.2em;
+}
+h5 {
+font-size: 1em;
+}
+h6 {
+font-size: 0.9em;
+}
+blockquote {
+color: #666666;
+margin: 0;
+padding-left: 3em;
+border-left: 0.5em #EEE solid;
+}
+hr {
+display: block;
+height: 2px;
+border: 0;
+border-top: 1px solid #aaa;
+border-bottom: 1px solid #eee;
+margin: 1em 0;
+padding: 0;
+}
+pre, code, kbd, samp {
+color: #000;
+font-family: monospace, monospace;
+_font-family: 'courier new', monospace;
+font-size: 0.98em;
+}
+pre {
+white-space: pre;
+white-space: pre-wrap;
+word-wrap: break-word;
+}
+b, strong {
+font-weight: bold;
+}
+dfn {
+font-style: italic;
+}
+ins {
+background: #ff9;
+color: #000;
+text-decoration: none;
+}
+mark {
+background: #ff0;
+color: #000;
+font-style: italic;
+font-weight: bold;
+}
+sub, sup {
+font-size: 75%;
+line-height: 0;
+position: relative;
+vertical-align: baseline;
+}
+sup {
+top: -0.5em;
+}
+sub {
+bottom: -0.25em;
+}
+ul, ol {
+margin: 1em 0;
+padding: 0 0 0 2em;
+}
+li p:last-child {
+margin-bottom: 0;
+}
+ul ul, ol ol {
+margin: .3em 0;
+}
+dl {
+margin-bottom: 1em;
+}
+dt {
+font-weight: bold;
+margin-bottom: .8em;
+}
+dd {
+margin: 0 0 .8em 2em;
+}
+dd:last-child {
+margin-bottom: 0;
+}
+img {
+border: 0;
+-ms-interpolation-mode: bicubic;
+vertical-align: middle;
+}
+figure {
+display: block;
+text-align: center;
+margin: 1em 0;
+}
+figure img {
+border: none;
+margin: 0 auto;
+}
+figcaption {
+font-size: 0.8em;
+font-style: italic;
+margin: 0 0 .8em;
+}
+table {
+width: 100%;
+margin-bottom: 2em;
+border-bottom: 1px solid #ddd;
+border-right: 1px solid #ddd;
+border-spacing: 0;
+border-collapse: collapse;
+}
+table th {
+padding: .2em 1em;
+background-color: #eee;
+border-top: 1px solid #ddd;
+border-left: 1px solid #ddd;
+}
+table td {
+padding: .2em 1em;
+border-top: 1px solid #ddd;
+border-left: 1px solid #ddd;
+vertical-align: top;
+}
+.author {
+font-size: 1.2em;
+text-align: center;
+}
+@media only screen and (min-width: 480px) {
+body {
+font-size: 14px;
+}
+}
+@media only screen and (min-width: 768px) {
+body {
+font-size: 16px;
+}
+}
+@media print {
+* {
+background: transparent !important;
+color: black !important;
+filter: none !important;
+-ms-filter: none !important;
+}
+body {
+font-size: 12pt;
+max-width: 100%;
+}
+a, a:visited {
+text-decoration: underline;
+}
+hr {
+height: 1px;
+border: 0;
+border-bottom: 1px solid black;
+}
+a[href]:after {
+content: " (" attr(href) ")";
+}
+abbr[title]:after {
+content: " (" attr(title) ")";
+}
+.ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
+content: "";
+}
+pre, blockquote {
+border: 1px solid #999;
+padding-right: 1em;
+page-break-inside: avoid;
+}
+tr, img {
+page-break-inside: avoid;
+}
+img {
+max-width: 100% !important;
+}
+@page :left {
+margin: 15mm 20mm 15mm 10mm;
+}
+@page :right {
+margin: 15mm 10mm 15mm 20mm;
+}
+p, h2, h3 {
+orphans: 3;
+widows: 3;
+}
+h2, h3 {
+page-break-after: avoid;
+}
+}
+</style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Ethical Metrics</h1>
+<p class="author">Luis Becerra Solis</p>
+</header>
+<p>Innovation does not arise from complacency; the human condition can only be improved upon introspection, critically analyzing our status quo. The American response to the COVID-19 pandemic highlights how our public systems and infrastructure are susceptible to inefficiency and mediocrity. Contemporary America is a product of its history: a chronology of social hierarchies with explicit underclasses [1], with whiteness central to the preservation of power.</p>
+<blockquote>
+<p>[1] <em>communities whose societal status was made deliberately inferior to a ruling class.</em></p>
+</blockquote>
+<p>With social inequity embedded into the construction of the American nation, our contemporary society is a product of ethical missteps. Recognizing our history’s mistakes—slavery, Jim Crow, Japanese internment, Chinese exclusion, Mexican deportation, ignoring the AIDS crisis, […]—does not nullify their inertia. A prosperous future cannot be built upon injustice; our mission for a better world requires a renovation of our societal foundations.</p>
+<p>We are responsible for our reality. We must interpret the pandemic as a visualization of our society’s fault lines—an outline for human improvement. Our world is on fire, but our responsibility is to quell the flames, not endure the rising temperatures. Our response to the pandemic determines our expectations for society.</p>
+<p>Instituting letter grading for the fall is a declaration of complacency, evading discussion on the ethics of grading systems. We are allowing social inequity to influence our analysis of academic excellence; deluding ourselves into the belief that grades determine success, instead of the desire to learn, to discover—to embrace fallibility.</p>
+<p>Should the Massachusetts Institute of Technology be committed to a <em>better tomorrow</em>, we ought to begin by bettering our own institution. Rather than carry over our history of inequality, let us design a sustainable future.</p>
+<h2 id="social-dynamics-academic-pursuit">Social Dynamics &amp; Academic Pursuit</h2>
+<blockquote>
+<p><em>(6) While anxiety over grades contributes to the stress and pressure experienced by MIT students, APART believes that the methods of assessment employed in classes play a comparable or even more significant role, particularly in this time of public health risks and anxiety due to the Covid-19 pandemic.</em></p>
+</blockquote>
+<p>Proposing letter grading as a motivator for academic excellence presents a <em>false dilemma,</em> wherein we assume the absence of grades (or any abstract metric system) inhibits successful learning. However, grades do not exclusively capture a students’ academic success; grades are influenced by multiple pedagogical considerations, such as content accessibility, teacher-student interactions, and course structure. Consider the following:</p>
+<ol type="1">
+<li>Grades reflect a students’ ability to learn</li>
+<li>Grades reflect a educators’ ability to teach</li>
+</ol>
+<p>Analyzing grades as above reminds us that students and professors are mutually accountable—a professor can expect academic resilience from their students only if their student can expect in return educational proficiency. Therefore, grades are a supplementary tool by which students and educators can assess their mutual accountability; grades suggest how the educational experience can <em>improve</em> on behalf of both involved parties.</p>
+<p>The proposed letter grading scheme is based on the pretense that students will not be motivated to learn without an abstract metric system, which is untrue of the learning community of MIT. We are nerds at heart; we enjoy solving difficult problems because we recognize our academic capabilities, <em>not</em> because there is a grade attached. MIT students take on difficult classes to challenge themselves, to continue to learn new forms of thinking and problem-solving.</p>
+<p>Attributing motivation primarily to grades directly threatens our undergraduates’ academic ambitions. Students are motivated to take classes which offer them better grades, instead of a deeper understanding of their field of passion. Easy A’s are only a figure of speech at MIT, which further undermines the role of grades as academic motivation.</p>
+<p>A letter grade policy emphasizes the pseudo-objective outcome on a student’s transcript, inhibiting real-time student engagement in improving their educational experience. A universal P/NE policy allows students and professors to asses their mutual accountability without sacrificing content depth and rigor. P/NE allows students to learn; letter grading tethers us to an irrelevant, abstract metric system for academic excellence.</p>
+<h2 id="returning-to-better-normal">Returning to Better Normal</h2>
+<blockquote>
+<p><em>(9) Finally, we note that in the event that the conditions of the pandemic worsen significantly during the fall, it is possible that a system of alternate grades (“universal” PE/NE) could be mandated for all subjects as was the case in the spring.</em></p>
+</blockquote>
+<p>Every aspect of our institutional COVID-19 characterizes our proclivity to equitable policymaking. Our grading policy portrays our cost-benefit analysis of a humanitarian health crisis and academic metrics; our grading policy illustrates our ethical composition, and how we seek to mitigate the cascading effects of social inequity. The proposed letter grading policy is a testament of ethical negligence, rejecting the opportunity to restructure education for the future.</p>
+<p>Recognizing the real possibility of worse social turmoil is a direct admission that we are (at best) in unstable equilibrium. The United States has all but controlled the spread of COVID-19, and current conditions present a somber outlook on the future. It is nonsensical to withhold extended human compassion until the arrival of worse conditions. The inefficacies of our governmental response forced us into a <em>reactive</em> response, and we must therefore be <em>proactive</em> in how we sustain and support our students <em>before</em> their living stability is further jeopardized.</p>
+<p>However, the notion that all is lost is equally naive and pessimistic. The future is not a distant thought, it is the culmination of our present actions. There is no discrete timeline for social progress; our society’s improvement is entirely dependent on our willingness to embrace change. The proposed letter grading scheme for the fall semester of 2020 directly infringes on MIT’s mission for a better world—the grading scheme remains complacent and complicit in the residual effects of ineffective, inequitable social infrastructure.</p>
+<p>Just as money cannot guarantee your admission to MIT, the variability of students’ living situations during a health pandemic should not affect their academic pursuits and outcomes. We can revise the grading policy before September 1st; we can set the ethical standard for our peer institutions and the whole of higher education. But we must be willing to do so.</p>
+</body>
+</html>
