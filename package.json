@@ -9,6 +9,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
+    "test": "astro build && playwright test",
     "lint": "eslint \"src/**/*.{ts,tsx,astro}\"",
     "format": "prettier --write --plugin-search-dir=. ."
   },
