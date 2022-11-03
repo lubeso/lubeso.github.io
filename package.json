@@ -9,6 +9,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
+    "test": "astro build && playwright test",
     "lint": "eslint \"src/**/*.{ts,tsx,astro}\"",
     "format": "prettier --write --plugin-search-dir=. ."
   },
@@ -16,6 +17,7 @@
     "astro": "^1.6.0"
   },
   "devDependencies": {
+    "@playwright/test": "^1.27.1",
     "@typescript-eslint/eslint-plugin": "^5.42.0",
     "@typescript-eslint/parser": "^5.42.0",
     "eslint": "^8.26.0",
