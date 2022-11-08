@@ -11,6 +11,7 @@ specifiers:
   eslint-plugin-jsx-a11y: ^6.6.1
   prettier: ^2.7.1
   prettier-plugin-astro: ^0.7.0
+  prettier-plugin-tailwindcss: ^0.1.13
   tailwindcss: ^3.0.24
   typescript: ^4.8.4
 
@@ -28,6 +29,7 @@ devDependencies:
   eslint-plugin-jsx-a11y: 6.6.1_eslint@8.26.0
   prettier: 2.7.1
   prettier-plugin-astro: 0.7.0
+  prettier-plugin-tailwindcss: 0.1.13_prettier@2.7.1
   typescript: 4.8.4
 
 packages:
@@ -3803,6 +3805,15 @@ packages:
       prettier: 2.7.1
       sass-formatter: 0.7.5
       synckit: 0.8.4
+    dev: true
+
+  /prettier-plugin-tailwindcss/0.1.13_prettier@2.7.1:
+    resolution: {integrity: sha512-/EKQURUrxLu66CMUg4+1LwGdxnz8of7IDvrSLqEtDqhLH61SAlNNUSr90UTvZaemujgl3OH/VHg+fyGltrNixw==}
+    engines: {node: '>=12.17.0'}
+    peerDependencies:
+      prettier: '>=2.2.0'
+    dependencies:
+      prettier: 2.7.1
     dev: true
 
   /prettier/2.7.1:
