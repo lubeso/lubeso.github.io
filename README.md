@@ -1,5 +1,8 @@
 # Website
 
+![Tests](https://github.com/lubeso/lubeso.github.io/actions/workflows/tests.yml/badge.svg)
+![Deploy](https://github.com/lubeso/lubeso.github.io/actions/workflows/deploy.yml/badge.svg)
+
 ## 🧞 Commands
 
 All commands are run from the root of the project, from a terminal:
