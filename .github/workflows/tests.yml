@@ -28,4 +28,6 @@ jobs:
       - name: Install playwright browsers
         run: pnpm dlx playwright install --with-deps
       - name: Run tests
-        run: pnpm dlx playwright test
+        run: |
+          astro build
+          pnpm dlx playwright test
