@@ -29,5 +29,5 @@ jobs:
         run: pnpm dlx playwright install --with-deps
       - name: Run tests
         run: |
-          astro build
+          pnpm astro build
           pnpm dlx playwright test
