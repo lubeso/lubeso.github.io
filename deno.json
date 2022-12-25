@@ -6,6 +6,5 @@
       "dom.iterable",
       "dom.asynciterable"
     ]
-  },
-  "importMap": "./import_map.json"
+  }
 }
