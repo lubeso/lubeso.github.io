@@ -1,0 +1,38 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - public
+      - "components/**/*.ts[x]?"
+      - "pages/**/*.ts[x]?"
+      - styles/**/*.css
+      - "*.config.[cm]js"
+  pull_request:
+    branches:
+      - main
+    paths:
+      - public
+      - "components/**/*.ts[x]?"
+      - "pages/**/*.ts[x]?"
+      - styles/**/*.css
+      - "*.config.[cm]js"
+
+jobs:
+  ci:
+    name: CI
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "19.3.0"
+          cache: pnpm
+      - name: Install dependencies
+        run: pnpm i
+      - name: Build static site
+        run: pnpm build
