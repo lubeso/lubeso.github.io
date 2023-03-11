@@ -38,8 +38,6 @@ jobs:
           cache: pnpm
       - name: Install dependencies
         run: pnpm i
-      - name: Build static site
-        run: pnpm build
       - name: Cache build output
         uses: actions/cache@v3
         with:
@@ -51,3 +49,5 @@ jobs:
           # If source files changed but packages didn't, rebuild from a prior cache.
           restore-keys: |
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-
+      - name: Build static site
+        run: pnpm build
