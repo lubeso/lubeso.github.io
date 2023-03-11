@@ -27,13 +27,15 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 7.29.1
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: "19.3.0"
           cache: pnpm
-      - name: Enable pnpm
-        run: corepack enable pnpm@7.29.1
       - name: Install dependencies
         run: pnpm i
       - name: Build static site
