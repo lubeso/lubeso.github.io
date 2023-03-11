@@ -28,11 +28,11 @@ export function Layout(props: { children?: ReactNode }): JSX.Element {
           href="/favicon-16x16.png"
         />
         <link rel="manifest" href="/site.webmanifest" />
-        <title>Document</title>
+        <title>Luis Becerra Solis</title>
       </Head>
       <header className="flex flex-row flex-wrap items-center justify-center space-y-2 p-4 text-center">
         <Link href="/">
-          <h1 className="text-3xl font-bold">Untitled</h1>
+          <h1 className="text-3xl font-bold">Luis Becerra Solis</h1>
         </Link>
       </header>
       <main className="flex flex-1 flex-col flex-nowrap items-stretch justify-start overflow-scroll">
