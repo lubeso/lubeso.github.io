@@ -37,7 +37,7 @@ jobs:
         uses: actions/upload-pages-artifact@v1
         with:
           path: out
-      - name: Cache site build
+      - name: Cache build output
         uses: actions/cache@v3
         with:
           # See here for caching with `yarn` https://github.com/actions/cache/blob/main/examples.md#node---yarn or you can leverage caching with actions/setup-node https://github.com/actions/setup-node
