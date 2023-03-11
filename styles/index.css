@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  @apply text-slate-900 dark:text-slate-50;
+  @apply font-serif text-xl;
+}
+
+html {
+  @apply bg-slate-50 dark:bg-slate-900;
+  @apply h-screen w-screen;
+  @apply flex flex-col flex-nowrap items-center justify-center;
+}
+
+body {
+  @apply contents;
+}
+
+#__next {
+  @apply h-full w-full;
+  @apply flex flex-col flex-nowrap items-stretch justify-between;
+}

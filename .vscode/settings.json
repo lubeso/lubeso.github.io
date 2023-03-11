@@ -1,3 +1,12 @@
 {
-  "deno.enable": true
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true,
+    "source.fixAll": true
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "tailwindCSS.validate": true,
+  "files.associations": {
+    "*.css": "tailwindcss"
+  }
 }
