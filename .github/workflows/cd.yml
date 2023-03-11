@@ -23,6 +23,8 @@ jobs:
         with:
           node-version: "19.3.0"
           cache: pnpm
+      - name: Enable pnpm
+        run: corepack enable pnpm@7.29.1
       - name: Install dependencies
         run: pnpm i
       - name: Build static site
