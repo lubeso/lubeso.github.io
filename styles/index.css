@@ -4,7 +4,9 @@
 
 :root {
   @apply text-slate-900 dark:text-slate-50;
-  @apply font-serif text-xl;
+  @apply font-serif;
+  @apply leading-loose;
+  @apply box-border;
 }
 
 html {
@@ -18,6 +20,6 @@ body {
 }
 
 #__next {
-  @apply h-full w-full;
+  @apply h-full w-fit max-w-lg;
   @apply flex flex-col flex-nowrap items-stretch justify-between;
 }
