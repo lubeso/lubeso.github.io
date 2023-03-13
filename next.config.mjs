@@ -3,6 +3,9 @@
 /**
  * @type {import("next").NextConfig}
  */
-const config = { output: "export" };
+const config = {
+  reactStrictMode: true,
+  output: "export",
+};
 
 export default config;
