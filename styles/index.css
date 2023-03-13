@@ -20,6 +20,6 @@ body {
 }
 
 #__next {
-  @apply h-full w-fit max-w-lg;
+  @apply h-full w-2/3 max-w-xl;
   @apply flex flex-col flex-nowrap items-stretch justify-between;
 }
