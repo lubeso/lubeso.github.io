@@ -5,9 +5,9 @@ on:
     branches:
       - main
     paths:
-      - src
-      - public
-      - scripts
+      - src/**.ts
+      - public/**
+      - scripts/**.js
       - Dockerfile
       - nginx/Dockerfile
 
