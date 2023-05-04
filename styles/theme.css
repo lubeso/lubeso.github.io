@@ -1,0 +1,39 @@
+:root {
+  /* Light */
+  --light-main-background-color: hsl(20, 0%, 98%);
+  --light-accent-background-color: hsl(20, 0%, 90%);
+  --light-main-font-color: hsl(0, 0%, 10%);
+  --light-accent-font-color: hsl(20, 0%, 30%);
+  /* Dark */
+  --dark-main-background-color: var(--light-main-font-color);
+  --dark-accent-background-color: var(--light-accent-font-color);
+  --dark-main-font-color: var(--light-main-background-color);
+  --dark-accent-font-color: var(--light-accent-background-color);
+  /* Colors */
+  --theme-main-background-color: var(--light-main-background-color);
+  --theme-accent-background-color: var(--light-accent-background-color);
+  --theme-main-font-color: var(--light-main-font-color);
+  --theme-accent-font-color: var(--light-accent-font-color);
+  /* Typography */
+  --theme-font-size: larger;
+  --theme-font-family: 'Domine', serif;
+  /* Formatting */
+  --theme-line-height: 2.1;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --theme-main-background-color: var(--dark-main-background-color);
+    --theme-accent-background-color: var(--dark-accent-background-color);
+    --theme-main-font-color: var(--dark-main-font-color);
+    --theme-accent-font-color: var(--dark-accent-font-color);
+  }
+}
+
+:root {
+  font-size: var(--theme-font-size);
+  background-color: var(--theme-main-background-color);
+  color: var(--theme-main-font-color);
+  font-family: var(--theme-font-family);
+  line-height: var(--theme-line-height);
+}

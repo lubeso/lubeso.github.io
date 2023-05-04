@@ -1,24 +1,15 @@
 name: CI
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - public
-      - "components/**/*.ts[x]?"
-      - "pages/**/*.ts[x]?"
-      - styles/**/*.css
-      - "*.config.[cm]js"
   pull_request:
     branches:
       - main
     paths:
+      - src
       - public
-      - "components/**/*.ts[x]?"
-      - "pages/**/*.ts[x]?"
-      - styles/**/*.css
-      - "*.config.[cm]js"
+      - scripts
+      - Dockerfile
+      - nginx/Dockerfile
 
 jobs:
   ci:
@@ -30,7 +21,7 @@ jobs:
       - name: Setup pnpm
         uses: pnpm/action-setup@v2
         with:
-          version: 7.29.1
+          version: 8.3.1
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
@@ -38,16 +29,19 @@ jobs:
           cache: pnpm
       - name: Install dependencies
         run: pnpm i
+      - name: Run linter
+        run: pnpm eslint .
+      - name: Check formatting
+        run: pnpm prettier --check .
       - name: Cache build output
         uses: actions/cache@v3
         with:
-          # See here for caching with `yarn` https://github.com/actions/cache/blob/main/examples.md#node---yarn or you can leverage caching with actions/setup-node https://github.com/actions/setup-node
           path: |
-            ${{ github.workspace }}/.next/cache
+            ${{ github.workspace }}/dist
           # Generate a new cache whenever packages or source files change.
-          key: ci-${{ runner.os }}-nextjs-${{ hashFiles('**/pnpm-lock.yaml') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}
+          key: ci-${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}-${{ hashFiles('**.ts') }}
           # If source files changed but packages didn't, rebuild from a prior cache.
           restore-keys: |
-            ci-${{ runner.os }}-nextjs-${{ hashFiles('**/pnpm-lock.yaml') }}-
-      - name: Build static site
-        run: pnpm build
+            ci-${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}-
+      - name: Build source
+        run: pnpm tsc
