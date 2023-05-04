@@ -1,0 +1,60 @@
+header {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+h1 {
+  margin: unset;
+  text-align: center;
+}
+
+header nav {
+  margin: unset;
+  min-width: min-content;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+header nav ul {
+  margin: unset;
+  padding-left: unset;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: stretch;
+}
+
+header nav ul li {
+  display: contents;
+}
+
+header nav ul li a {
+  color: unset;
+  text-align: center;
+  text-decoration: unset;
+  font-size: xx-large;
+}
+
+header nav ul li a:visited {
+  color: unset;
+}
+
+@media (min-width: 720px) {
+  header nav ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  header nav ul li a {
+    padding: 0 0.5rem;
+  }
+}

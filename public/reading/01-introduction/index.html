@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Web manifest -->
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="192x192" href="/images/favicon-192x192.png" />
+  <!-- Load Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Domine:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Math&display=swap">
+  <!-- Apply styles -->
+  <link rel="stylesheet" href="/styles/index.css" />
+  <style type="text/css">
+    /* Page overrides go here... */
+    article figure {
+      margin: 1rem;
+      /* background-color: var(--theme-accent-background-color); */
+      /* color: var(--theme-accent-font-color); */
+    }
+
+    article figure blockquote {
+      margin: unset;
+      padding: 1rem;
+      text-align: justify;
+    }
+
+    article figure blockquote p {
+      margin: unset;
+    }
+
+    article figure figcaption {
+      padding: 0 1rem;
+    }
+
+    article section ol {
+      margin: 0 auto;
+      width: fit-content;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: stretch;
+      padding: 0 1rem;
+      padding-left: 2rem;
+      list-style-type: lower-alpha;
+    }
+
+    article section ol li {
+      margin: 0.5rem 0;
+    }
+
+    .menu {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: start;
+      align-items: stretch;
+    }
+
+    .menu h5 {
+      text-align: center;
+    }
+
+    .menu article {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: space-evenly;
+      align-items: flex-end;
+    }
+
+    .menu label {
+      margin: 1.5rem 0;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: stretch;
+    }
+
+  </style>
+  <!-- MathJax rendering engine -->
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [["$", "$"], ["\\(", "\\)"]]
+      }
+    }
+  </script>
+  <script src="https://unpkg.com/mathjax@3.2.2/es5/tex-chtml.js"></script>
+  <!-- Page scripts -->
+  <script defer type="module" src="/src/reading/01-introduction/index.js"></script>
+  <title>Calculus</title>
+</head>
+
+<body>
+  <!-- Site header -->
+  <header>
+    <!-- Title -->
+    <h1>Infinitesimal Calculus</h1>
+    <!-- Navigation -->
+    <nav>
+      <ul>
+        <!-- Homepage -->
+        <li>
+          <a href="/">Home</a>
+        </li>
+        <!-- Reading -->
+        <li>
+          <a href="/reading/">Reading</a>
+        </li>
+        <!-- TODO: Add more links... -->
+      </ul>
+    </nav>
+  </header>
+  <!-- Main content -->
+  <main>
+    <article>
+      <h2>Introduction</h2>
+      <figure>
+        <blockquote>
+          <p>
+            Calculus is the mathematical study of continuous change [...] It has two major
+            branches, differential calculus and integral calculus; the former concerns
+            instantaneous rates of change, and the slopes of curves, while the latter
+            concerns accumulation of quantities, and areas under or between curves. [...]
+            Calculus is used in every branch of the physical sciences, [and] in other
+            fields wherever a problem can be mathematically modeled and an optimal solution
+            is desired.
+          </p>
+        </blockquote>
+        <figcaption>
+          &ndash; Wikipedia, the Free Encyclopedia
+        </figcaption>
+      </figure>
+      <section>
+        <h3>The history of calculus</h3>
+        <p>
+          The foundations of modern calculus are commonly attributed to two European scholars from
+          the 17th century: Isaac Newton and Gottfried Leibniz. They worked independently of each
+          other, and arrived to similar conclusions by different means: Newton used the theory of
+          limits, whereas Leibniz used the theory of infinitesimals. Leibniz's methods were easier
+          to use, but they lacked rigorous proof &mdash; evidence their results were correct.
+          Mathematicians of the time would more quickly develop supporting evidence for Newton's
+          methods, causing Leibniz's methods to lose formal priority and relevance.
+        </p>
+        <p>
+          In the 1960s, mathematician Abraham Robinson developed rigorous proof for Leibniz's
+          infinitesimal calculus methods. Using concepts from mathematical logic, Robinson
+          formally defined the hyperreal number system, an extension of the real number system
+          which includes infinitesimally small and infinitely large numbers. Equipped with
+          supporting evidence, we can now use the infinitesimal method to learn and
+          apply differential and integral calculus.
+        </p>
+      </section>
+      <section>
+        <h3>Why infinitesimal calculus?</h3>
+        <p>
+          Calculus is traditionally taught using the theory of limits; what are the benefits
+          of the theory of infinitesimals? Infinitesimals are easier to understand and use,
+          as the fundamental insights for differential and integral calculus can be derived
+          using comparatively simple mathematics concepts. The remainder of this article
+          will demonstrate this claim by using the theory of infinitesimals to solve the
+          following two problems:
+        </p>
+        <ol>
+          <li>finding the slope of the curve at a specific point</li>
+          <li>finding the area under the curve over a closed interval</li>
+        </ol>
+        <p>
+          Both problems will reference the following function:
+        </p>
+        <figure class="plot">
+          <svg class="pane" viewBox="0 0 200 150">
+            <g class="utilities">
+              <!-- Generated at run-time -->
+            </g>
+            <g class="background">
+              <rect width="100%" height="100%"></rect>
+            </g>
+            <g class="axes">
+              <g class="x-axis">
+                <!-- Generated at run-time... -->
+              </g>
+              <g class="y-axis">
+                <!-- Generated at run-time... -->
+              </g>
+            </g>
+            <g class="plots">
+              <!-- Generated at run-time... -->
+            </g>
+          </svg>
+          <figcaption>
+            Plot of the function \(y = x^2\)
+          </figcaption>
+        </figure>
+        <section>
+          <h4>Differential calculus</h4>
+          <article class="problem">
+            <h5>Problem 1</h5>
+            <p>
+              Find the slope of the function \(y = x^2\) at the point \((1, 1)\).
+            </p>
+            <figure class="plot" id="tangent">
+              <svg class="pane" viewBox="0 0 200 150">
+                <g class="utilities">
+                  <!-- Generated at run-time -->
+                </g>
+                <g class="background">
+                  <rect width="100%" height="100%"></rect>
+                </g>
+                <g class="axes">
+                  <g class="x-axis">
+                    <!-- Generated at run-time... -->
+                  </g>
+                  <g class="y-axis">
+                    <!-- Generated at run-time... -->
+                  </g>
+                </g>
+                <g class="plots">
+                  <!-- Generated at run-time... -->
+                </g>
+              </svg>
+              <figcaption>
+                Plot of the function \(y = x^2\) and the tangent line at the point \((1, 1)\).
+              </figcaption>
+            </figure>
+          </article>
+          <p>
+            The slope of a function at a specific point is equal to the slope of
+            the tangent line at that point. We can calculate the slope of the
+            tangent line by first calculating the slope of a secant line and
+            then bringing the second point infinitesimally close to the desired
+            point. Using the hyperreal number system, we can write a general
+            equation for this process:
+            \[
+            \dfrac{\Delta y}{\Delta x} = \dfrac{f(x + \delta) - f(x)}{\delta}
+            \]
+          </p>
+          <p>
+            In this equation, \(\delta\) represents an infinitesimal, a number
+            greater than 0 but smaller than any other real number. Substituting
+            our function \(y = x^2\) and our point of interest \((1,1)\), we
+            arrive at the following calculation:
+            \[
+            \begin{eqnarray}
+            \dfrac{\Delta y}{\Delta x} =&
+            \dfrac{\left(1 + \delta\right)^2 - 1^2}{\delta} \\
+            =& \dfrac{\left(1 + 2\delta + \delta^2\right) - 1}{\delta} \\
+            =& 2 + \delta \\
+            \end{eqnarray}
+            \]
+          </p>
+          <p>
+            The slope must be a real number, so we can take the real part of the
+            above calculation, and our final result is \(\tfrac{\Delta x}{\Delta y} = 2\). You can
+            verify this result with the following interactive plot, adjusting the
+            value of \(\delta\) and seeing how the approximation changes.
+          </p>
+          <figure class="plot interactive" id="secant">
+            <svg class="pane" viewBox="0 0 200 150">
+              <g class="utilities">
+                <!-- Generated at run-time -->
+              </g>
+              <g class="background">
+                <rect width="100%" height="100%"></rect>
+              </g>
+              <g class="axes">
+                <g class="x-axis">
+                  <!-- Generated at run-time... -->
+                </g>
+                <g class="y-axis">
+                  <!-- Generated at run-time... -->
+                </g>
+              </g>
+              <g class="plots">
+                <!-- Generated at run-time... -->
+              </g>
+            </svg>
+            <article class="menu">
+              <h5>Interactive menu</h5>
+              <article>
+                <label>
+                  <input type="range" min="0" max="1" step="0.01">
+                  <p>
+                    \(\delta = \) <span class="value delta"></span>
+                  </p>
+                </label>
+              </article>
+              <article>
+                <p>
+                  \(\Delta x/\Delta y = \) <span class="value slope"></span>
+                </p>
+              </article>
+              <section>
+            </article>
+            <figcaption>
+              Interactive plot of the function \(y = x^2\) and the secant line
+              starting at \((1, 1)\).
+            </figcaption>
+          </figure>
+        </section>
+        <section>
+          <h4>Integral calculus</h4>
+          <article class="problem">
+            <h5>Problem 2</h5>
+            <p>
+              Find the area under the function \(y = x^2\), between \(x = 1\) and
+              \(x = 2\).
+            </p>
+            <figure class="plot" id="area">
+              <svg class="pane" viewBox="0 0 200 150">
+                <g class="utilities">
+                  <!-- Generated at run-time -->
+                </g>
+                <g class="background">
+                  <rect width="100%" height="100%"></rect>
+                </g>
+                <g class="axes">
+                  <g class="x-axis">
+                    <!-- Generated at run-time... -->
+                  </g>
+                  <g class="y-axis">
+                    <!-- Generated at run-time... -->
+                  </g>
+                </g>
+                <g class="plots">
+                  <!-- Generated at run-time... -->
+                </g>
+              </svg>
+              <figcaption>
+                Plot of the region \(A\) bounded by the function \(y = x^2\) and
+                the vertical lines \(x = 1\) and \(x = 2\).
+              </figcaption>
+            </figure>
+          </article>
+          <p>
+            We can reconstruct the region \(A\) as the composite of infinitely many
+            rectangles with width \(w = \delta\) and height \(h_i = (1 + i\delta)^2\).
+            Using this definition, the area of region \(A\) is equal to the sum of
+            each individual rectangle area:
+            \[
+            A = \sum_{i=1}^{N} \left(w \cdot h_i\right)
+            \]
+            In this equation, \(N = 1 / \delta\) is the total number of thin rectangles;
+            in the hyperreal number system, \(N\) represents an infinite number, a number
+            greater than all other real numbers. More importantly, we can apply the same
+            algebraic operations on \(N\) and \(\delta\) as with real numbers, and
+            therefore we can decompose the sum as follows:
+            \[
+            \begin{eqnarray}
+            A =& \sum_{i=1}^{N} \left(\delta \cdot \left(1 + i\delta\right)^2\right) \\
+            =& \sum_{i=1}^{N} \left\{\delta \cdot \left[1 + 2i\delta + \left(i\delta\right)^2\right]\right\} \\
+            =& \sum_{i=1}^{N} \left(\delta + 2i\delta^2 + i^2\delta^3\right) \\
+            =& \delta \sum_{i=1}^{N} 1 + 2\delta^2 \sum_{i=1}^{N} i + \delta^3 \sum_{i=1}^{N} i^2\\
+            =& N\delta + 2\delta^2\left(\tfrac{N\left(N + 1\right)}{2}\right) + \delta^3\left(\tfrac{N(N + 1)(2N +
+            1)}{6}\right) \\
+            =& 1 + \delta^2\left(N^2 + N\right) + \tfrac{\delta^3}{6}\left(2N^3 + 3N^2 + N\right) \\
+            =& 1 + \left(1 + \delta\right) + \tfrac{1}{6}\left(2 + 3\delta + \delta^2\right) \\
+            =& \tfrac{7}{3} + \tfrac{3}{2}\delta + \tfrac{1}{6}\delta^2
+            \end{eqnarray}
+            \]
+          </p>
+          <p>
+            The area must be a real number, so we take the real part of the above
+            calculation as we did before, and our final result is \(A = \tfrac{7}{3}\).
+            You can verify this result with the following interactive plot, adjusting
+            the value of \(\delta\) and seeing how the approximation changes.
+          </p>
+          <figure class="plot interactive" id="rectangles">
+            <svg class="pane" viewBox="0 0 200 150">
+              <g class="utilities">
+                <!-- Generated at run-time -->
+              </g>
+              <g class="background">
+                <rect width="100%" height="100%"></rect>
+              </g>
+              <g class="axes">
+                <g class="x-axis">
+                  <!-- Generated at run-time... -->
+                </g>
+                <g class="y-axis">
+                  <!-- Generated at run-time... -->
+                </g>
+              </g>
+              <g class="plots">
+                <!-- Generated at run-time... -->
+              </g>
+            </svg>
+            <article class="menu">
+              <h5>Interactive menu</h5>
+              <article>
+                <label>
+                  <input type="range" min="0" max="1" step="0.01">
+                  <p>
+                    \(\delta = \) <span class="value delta"></span>
+                  </p>
+                </label>
+              </article>
+              <article>
+                <p>
+                  \(A = \) <span class="value area"></span>
+                </p>
+              </article>
+              <section>
+            </article>
+            <figcaption>
+              Interactive plot of the region \(A\) bounded by the function \(y = x^2\) and
+              the vertical lines \(x = 1\) and \(x = 2\).
+            </figcaption>
+          </figure>
+        </section>
+      </section>
+      <section>
+        <h3>Conclusion</h3>
+        <p>
+          Although the result for the second problem required more algebraic
+          manipulation than the first, we solved both using simple mathematics
+          concepts. However, our solutions depend on the validity of the hyperreal
+          number system, otherwise we could not apply the same algebraic operations
+          on infinitesimally small and infinitely large quantities as we do with
+          real numbers. Limits are the conventional alternative for formally defining
+          properties of these quantities, but they are relatively more complicated.
+        </p>
+        <p>
+          In the case of differential calculus, the general equation for the
+          slope of a function is similar but strange:
+          \[
+          \frac{\Delta y}{\Delta x} = \lim_{h\to0}\dfrac{f(x + h) - f(x)}{h}
+          \]
+          This definition is strange, because when \(h = 0\), then
+          \(\Delta y/\Delta x = 0/0\), which is undefined. Substituting our
+          equation and point from before, we would ultimately arrive at the
+          same result, but the reasoning is abstracted behind the idea of
+          \(h\) approaching, but never quite reaching, zero.
+        </p>
+        <p>
+          In the case of integral calculus, the principles are the same, but
+          without a valid representation of \(N\), the limit method requires
+          computing an infinite sum:
+          \[
+          A = \sum_{i=1}^{\infty} \left(\Delta x \cdot \left(1 + i\Delta x\right)^2\right) \\
+          \]
+          With either method the result is the same, but for the method of limits this stage
+          requires defining the properties of infinite series, such as convergence and
+          divergence &mdash; comparatively more complicated than the infinitesimal method.
+        </p>
+        <p>
+          Calculus has important applications across science and engineering, and therefore
+          calculus is a branch of mathematics worth learning. In honor of the importance of
+          calculus, educational resources should present the topic using clear and intuitive
+          methods. Pursuing this goal can require deviating from convention, but such is
+          par the course for innovating and discovery.
+        </p>
+      </section>
+    </article>
+  </main>
+  <!-- Site footer -->
+  <footer>
+    <!-- License -->
+    Distributed under a
+    <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">
+      Creative Commons Attribution-ShareAlike 4.0 License
+    </a>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+footer {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+footer a {
+  color: unset;
+  text-underline-offset: 2pt;
+}
+
+footer a:visited {
+  color: unset;
+}
