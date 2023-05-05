@@ -1,12 +1,7 @@
 {
   "include": ["src"],
   "compilerOptions": {
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext",
-      "esnext.asynciterable"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext", "esnext.asynciterable"],
     "target": "esnext",
     "module": "esnext",
     "resolveJsonModule": true,
