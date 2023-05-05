@@ -263,7 +263,7 @@ function loadTangentLinePlot(): void {
   const plotPane = plotRoot.select<SVGSVGElement>(".pane");
   const plotPlots = plotPane.select<SVGGElement>(".plots");
   const layer = plotPlots.append("g").attr("class", "tangent");
-  const y = (x: number, m: number = 2, b: number = -1) => m * x + b;
+  const y = (x: number, m = 2, b = -1) => m * x + b;
   const points = new Array<[number, number]>(NUM_POINTS);
   for (let i = 0; i < NUM_POINTS; i++) {
     const x = STEP_SIZE * i;
