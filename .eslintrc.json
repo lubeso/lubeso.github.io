@@ -18,10 +18,9 @@
         "@typescript-eslint"
     ],
     "rules": {
-        "no-unused-vars": [
-            {
-                "destructuredArrayIgnorePattern": "^_"
-            }
-        ]
+        "@typescript-eslint/no-unused-vars": ["error", {
+            "destructuredArrayIgnorePattern": "^_",
+            "argsIgnorePattern": "^_"
+        }]
     }
 }
