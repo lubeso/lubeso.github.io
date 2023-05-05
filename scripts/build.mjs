@@ -14,6 +14,9 @@ const options = {
   entryPoints: ["src/reading/01-introduction/index.ts", "styles/index.css"],
   alias: {
     "d3-selection": "https://esm.sh/d3-selection@3.0.0",
+    "d3-axis": "https://esm.sh/d3-axis@3.0.0",
+    "d3-scale": "https://esm.sh/d3-scale@4.0.2",
+    "d3-shape": "https://esm.sh/d3-shape@3.2.0",
   },
 };
 
