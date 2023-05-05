@@ -16,7 +16,7 @@
   --theme-accent-font-color: var(--light-accent-font-color);
   /* Typography */
   --theme-font-size: larger;
-  --theme-font-family: 'Domine', serif;
+  --theme-font-family: "Domine", serif;
   /* Formatting */
   --theme-line-height: 2.1;
 }
