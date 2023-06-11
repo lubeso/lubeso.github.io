@@ -5,12 +5,14 @@ on:
     branches:
       - main
     paths:
-      - src/**.ts
-      - public/**
-      - scripts/**.js
+      - public
+      - "components/**/*.ts[x]?"
+      - "pages/**/*.ts[x]?"
+      - styles/**/*.css
+      - "*.config.[cm]js"
 
 jobs:
-  build:
+  deliver:
     name: Build static site
     runs-on: ubuntu-latest
     steps:
@@ -19,7 +21,7 @@ jobs:
       - name: Setup pnpm
         uses: pnpm/action-setup@v2
         with:
-          version: 8.3.1
+          version: 8.6.0
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
@@ -30,13 +32,14 @@ jobs:
       - name: Cache build output
         uses: actions/cache@v3
         with:
+          # See here for caching with `yarn` https://github.com/actions/cache/blob/main/examples.md#node---yarn or you can leverage caching with actions/setup-node https://github.com/actions/setup-node
           path: |
-            ${{ github.workspace }}/dist
+            ${{ github.workspace }}/.next/cache
           # Generate a new cache whenever packages or source files change.
-          key: ci-${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}-${{ hashFiles('**.ts') }}
+          key: cd-${{ runner.os }}-nextjs-${{ hashFiles('**/pnpm-lock.yaml') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}
           # If source files changed but packages didn't, rebuild from a prior cache.
           restore-keys: |
-            ci-${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}-
+            cd-${{ runner.os }}-nextjs-${{ hashFiles('**/pnpm-lock.yaml') }}-
       - name: Build static site
         run: pnpm build
       - name: Configure GitHub Pages
@@ -44,10 +47,10 @@ jobs:
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: public
+          path: out
   deploy:
     name: Deploy to GitHub pages
-    needs: build
+    needs: deliver
     runs-on: ubuntu-latest
     environment:
       name: github-pages

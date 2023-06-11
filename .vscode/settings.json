@@ -1,55 +1,12 @@
 {
   "editor.formatOnSave": true,
-  "editor.insertSpaces": true,
-  "editor.indentSize": "tabSize",
-  "editor.renderFinalNewline": true,
-  "editor.tabSize": 2,
-  "files.insertFinalNewline": true,
-  "files.encoding": "utf8",
-  "files.eol": "\n",
-  "files.trimTrailingWhitespace": true,
-  "prettier.configPath": ".prettierrc.json",
-  "prettier.ignorePath": ".prettierignore",
-  "[css]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.suggest.insertMode": "replace",
-    "cSpell.fixSpellingWithRenameProvider": false
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true,
+    "source.fixAll": true
   },
-  "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.suggest.insertMode": "replace"
-  },
-  "[javascript][typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.codeActionsOnSave": {
-      "source.organizeImports": true,
-      "source.fixAll": true
-    },
-    "editor.maxTokenizationLineLength": 2500
-  },
-  "[markdown]": {
-    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint",
-    "editor.unicodeHighlight.ambiguousCharacters": false,
-    "editor.unicodeHighlight.invisibleCharacters": false,
-    "editor.wordWrap": "on",
-    "editor.quickSuggestions": {
-      "comments": "off",
-      "strings": "off",
-      "other": "off"
-    },
-    "cSpell.fixSpellingWithRenameProvider": true,
-    "cSpell.advanced.feature.useReferenceProviderWithRename": true,
-    "cSpell.advanced.feature.useReferenceProviderRemove": "/^#+\\s/"
-  },
-  "[yaml]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.insertSpaces": true,
-    "editor.tabSize": 2,
-    "editor.autoIndent": "keep",
-    "editor.quickSuggestions": {
-      "other": true,
-      "comments": false,
-      "strings": true
-    }
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "tailwindCSS.validate": true,
+  "files.associations": {
+    "*.css": "tailwindcss"
   }
 }
