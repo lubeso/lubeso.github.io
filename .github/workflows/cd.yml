@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - public
+      - public/**
       - "components/**/*.ts[x]?"
       - "pages/**/*.ts[x]?"
       - styles/**/*.css
